@@ -16,7 +16,9 @@ class Events extends React.Component {
         ).then(
             response => response.json()
         ).then(
-            events => console.log(events)
+            events => this.setState({
+                events: events
+            })
         )
 
     }
@@ -25,6 +27,15 @@ return (
 
         <div>
             <h2>Calendar</h2>
+            <ul>
+                {
+                    this.state.events.map(
+                        eventt => (
+                            <li key={eventt.id}>{eventt.Name}</li>
+                        )
+                    )
+                }
+            </ul>
         </div>
 )}
     }
