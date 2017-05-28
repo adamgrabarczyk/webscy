@@ -10,7 +10,7 @@ import {LinkContainer} from 'react-router-bootstrap'
 
 
 import Home from './Home'
-import About from './About'
+import Calendar from './Calendar'
 import SingIn from './Singin'
 
 
@@ -26,15 +26,15 @@ const WebbscyApp = () => (
                 <Nav>
 
                     <LinkContainer to="/">
-                        <NavItem>Home</NavItem>
+                        <NavItem>Logowanie</NavItem>
                     </LinkContainer>
 
-                    <LinkContainer to="/about">
-                        <NavItem>About</NavItem>
+                    <LinkContainer to="/calendar">
+                        <NavItem>Kalendarz</NavItem>
                     </LinkContainer>
 
                     <LinkContainer to="/signin">
-                        <NavItem>SingIn</NavItem>
+                        <NavItem>Samba</NavItem>
                     </LinkContainer>
                 </Nav>
             </Navbar>
@@ -43,7 +43,7 @@ const WebbscyApp = () => (
             <hr/>
 
             <Route exact path="/" component={Home}/>
-            <Route path="/about" component={About}/>
+            <Route path="/calendar" component={Calendar}/>
             <Route path="/signin" component={SingIn}/>
         </div>
     </Router>
