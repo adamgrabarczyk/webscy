@@ -1,4 +1,5 @@
 import React from 'react'
+import {Table} from 'react-bootstrap'
 
 
 class Events extends React.Component {
@@ -27,15 +28,31 @@ return (
 
         <div>
             <h2>Calendar</h2>
-            <ul>
-                {
-                    this.state.events.map(
-                        eventt => (
-                            <li key={eventt.id}>{eventt.Name}</li>
-                        )
+            <Table>
+            <thead>
+            <tr>
+                <th>Wydarzenia</th>
+                <th>Miasto</th>
+                <th>Data</th>
+                <th>Kategoria</th>
+            </tr>
+            </thead>
+            <tbody>
+            {
+                this.state.events.map(
+                    eventt => (
+                        <tr key={eventt.id}>
+                            <td>{eventt.Name}</td>
+                            <td>{eventt.Town}</td>
+                            <td>{eventt.Date}</td>
+                            <td>{eventt.Type}</td>
+                        </tr>
                     )
-                }
-            </ul>
+                )
+            }
+            </tbody>
+                  </Table>
+
         </div>
 )}
     }
