@@ -1,0 +1,13 @@
+#titlle {
+    text-align: center;
+}
+
+
+#modal {
+    padding-bottom: 30px;
+    padding-top: 30px;
+    border-radius: 2%;
+    margin-left: 35%;
+    margin-right: 35%;
+    border: groove;
+}
