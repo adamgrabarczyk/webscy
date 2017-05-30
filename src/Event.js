@@ -32,7 +32,7 @@ import React from 'react'
                     return (
                       <div>
                             <h1>
-                              Event:
+
                               {' '}
                               {
                                 eventt ?
@@ -46,7 +46,16 @@ import React from 'react'
                                   {' '}
                                   {
                                       eventt ?
-                                          eventt.Price :
+                                          eventt.Price + ' zł' :
+                                          null
+                                  }
+                              </li>
+                              <li>
+                                  Gdzie?:
+                                  {' '}
+                                  {
+                                      eventt ?
+                                          eventt.Place :
                                           null
                                   }
                               </li>
