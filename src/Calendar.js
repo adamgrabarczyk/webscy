@@ -1,6 +1,6 @@
 import React from 'react'
 import {Table} from 'react-bootstrap'
-
+import { Link } from 'react-router-dom'
 
 class Events extends React.Component {
 
@@ -46,6 +46,7 @@ return (
                             <td>{eventt.Town}</td>
                             <td>{eventt.Date}</td>
                             <td>{eventt.Type}</td>
+                            <td><Link to={'/calendar/' + eventt.id}>Więcej</Link></td>
                         </tr>
                     )
                 )
