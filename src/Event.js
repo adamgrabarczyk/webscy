@@ -40,6 +40,18 @@ import React from 'react'
                                       null
                                   }
                             </h1>
+                          <ul>
+                              <li>
+                                  Cena:
+                                  {' '}
+                                  {
+                                      eventt ?
+                                          eventt.Price :
+                                          null
+                                  }
+                              </li>
+                                      </ul>
+
                           </div>
                     )
                   }
