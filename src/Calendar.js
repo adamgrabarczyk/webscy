@@ -3,6 +3,26 @@ import {Table, Jumbotron, Button} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import Filter from './Filter'
 
+const filters = {
+    word: (eventt, search) => [
+
+        eventt.Name
+    ].map(
+        word => word.toLowerCase()
+    ).some(
+        word => word.includes(
+            search.toLowerCase()
+        )
+    ),
+    type_kino: eventt => eventt.Type === 'Kino',
+    type_koncert: eventt => eventt.Type === 'Koncert',
+    type_kultura: eventt => eventt.Type === 'Kultura',
+    type_clubbing: eventt => eventt.Type === 'Clubbing',
+    type_sport: eventt => eventt.Type === 'Sport',
+    city_gdańsk: eventt => eventt.Town === 'Gdańsk'
+}
+
+
 class Events extends React.Component {
 
     constructor(props) {
@@ -10,12 +30,32 @@ class Events extends React.Component {
 
         this.state = {
             events: JSON.parse(localStorage.getItem('events')) || [],
-            search: ''
+            search: '',
+            activeFilter: [],
+            filterByType: false
         }
 
         this.searchUpdate = event => this.setState({
             search: event.target.value
-        })
+        },
+
+            () => this.setState({
+                activeFilter: this.state.activeFilter.filter(
+                    word => word !== 'word'
+                ).concat(this.state.search === '' ? [] : 'word')
+            }))
+
+this.FilterUpdate = (filterType, enabled) => this.setState({
+    activeFilter:this.state.activeFilter.filter(
+        type => {
+            const selectedPrefix = filterType.split('_')[0]
+            const currentPrefix = type.split('_')[0]
+            return selectedPrefix !== currentPrefix
+        }
+    ).concat(enabled === true ? filterType : [])
+})
+
+
 
         if (this.state.events.length === 0) {
             fetch(
@@ -42,7 +82,8 @@ return (
         <div>
             <h2>Calendar</h2>
             <Filter search={this.state.search}
-            searchUpdate={this.searchUpdate}/>
+            searchUpdate={this.searchUpdate}
+            FilterUpdate={this.FilterUpdate}/>
             <Table>
             <thead>
             <tr>
@@ -56,10 +97,13 @@ return (
             {
                 this.state.events.filter(
                     eventt => (
-                        this.state.search === '' ?
-                            true: eventt.Name.toLowerCase().includes(this.state.search.toLowerCase())
-                    )
 
+                        this.state.activeFilter.map(
+                            filaterName => filters[filaterName]
+                        ).every(
+                            func => func(eventt, this.state.search)
+                        )
+                    )
 
 
 
@@ -70,12 +114,11 @@ return (
 
                                 <h2>{eventt.Name}</h2>
                                 <p>{eventt.Type}</p>
-                                <p><Button bsStyle="primary"><Link to={'/calendar/' + eventt.id}>Więcej</Link></Button></p>
+                                <p><Button onClick="" bsStyle="primary"><Link to={'/calendar/' + eventt.id}>Więcej</Link></Button></p>
                             </Jumbotron></td>
                             <td>{eventt.Town}</td>
                             <td>{eventt.Date}</td>
                             <td>{eventt.Type}</td>
-                            {/*<td><Link to={'/calendar/' + eventt.id}>Więcej</Link></td>*/}
                         </tr>
                     )
                 )
