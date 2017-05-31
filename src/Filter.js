@@ -37,9 +37,11 @@ Dropdown, MenuItem, ButtonToolbar} from 'react-bootstrap'
                         <Dropdown.Toggle bsStyle="success"/>
                         <Dropdown.Menu className="super-colors">
                             <MenuItem eventKey="1" onClick={
-                                () => FilterUpdate('city_gdańsk', true)}>Gdańsk</MenuItem>
-                            <MenuItem eventKey="2">Gdynia</MenuItem>
-                            <MenuItem eventKey="3" active>Sopot</MenuItem>
+                                () => FilterUpdate('city_gdansk', true)}>Gdańsk</MenuItem>
+                            <MenuItem eventKey="2" onClick={
+                                () => FilterUpdate('city_gdynia', true)}>Gdynia</MenuItem>
+                            <MenuItem eventKey="3" onClick={
+                                () => FilterUpdate('city_sopot', true)}>Sopot</MenuItem>
                             </Dropdown.Menu>
                     </Dropdown>
                     </ButtonToolbar>

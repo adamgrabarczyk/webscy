@@ -19,7 +19,10 @@ const filters = {
     type_kultura: eventt => eventt.Type === 'Kultura',
     type_clubbing: eventt => eventt.Type === 'Clubbing',
     type_sport: eventt => eventt.Type === 'Sport',
-    city_gdańsk: eventt => eventt.Town === 'Gdańsk'
+    city_gdansk: eventt => eventt.Town === 'Gdańsk',
+    city_gdynia: eventt => eventt.Town === 'Gdynia',
+    city_sopot: eventt => eventt.Town === 'Sopot'
+
 }
 
 
