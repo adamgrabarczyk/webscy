@@ -1,5 +1,5 @@
 import React from 'react'
-import {Table, Jumbotron, Button} from 'react-bootstrap'
+import {Grid, Table, Jumbotron, Button} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import Filter from './Filter'
 
@@ -81,10 +81,10 @@ this.FilterUpdate = (filterType, enabled) => this.setState({
 
     render() {
 return (
-
+<Grid>
         <div>
             <h2>Calendar</h2>
-            <Filter search={this.state.search}
+            <Filter serch={this.state.search}
             searchUpdate={this.searchUpdate}
             FilterUpdate={this.FilterUpdate}/>
             <Table>
@@ -133,7 +133,8 @@ return (
 
 
         </div>
-)}
+</Grid>
+    )}
     }
 
 export default Events
