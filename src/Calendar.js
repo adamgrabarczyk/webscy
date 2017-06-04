@@ -58,6 +58,11 @@ this.FilterUpdate = (filterType, enabled) => this.setState({
     ).concat(enabled === true ? filterType : [])
 })
 
+        this.resetFilter = () => this.setState ({
+            activeFilter: [],
+            search: ''
+
+        })
 
 
         if (this.state.events.length === 0) {
@@ -84,9 +89,11 @@ return (
 <Grid>
         <div>
             <h2>Calendar</h2>
-            <Filter serch={this.state.search}
+            <Filter search={this.state.search}
             searchUpdate={this.searchUpdate}
-            FilterUpdate={this.FilterUpdate}/>
+            FilterUpdate={this.FilterUpdate}
+            activeFilter={this.state.activeFilter}
+            resetFilter={this.resetFilter}/>
             <Table>
             <thead>
             <tr>
@@ -134,7 +141,7 @@ return (
 
         </div>
 </Grid>
-    )}
+)}
     }
 
 export default Events

@@ -4,6 +4,46 @@ import { FormGroup, FormControl,
 Dropdown, MenuItem, ButtonToolbar} from 'react-bootstrap'
 
 
+const typeFilters = [
+    {
+        name: 'type_kino',
+        label: 'Kino',
+    },
+    {
+        name: 'type_koncert',
+        label: 'Koncert',
+    },
+    {
+        name: 'type_kultura',
+        label: 'Kultura',
+    },
+    {
+        name: 'type_clubbing',
+        label: 'Clubbing',
+    },
+    {
+        name: 'type_sport',
+        label: 'Sport',
+    },
+
+]
+
+const cityFilters = [
+
+    {
+        name: 'city_gdansk',
+        label: 'Gdańsk',
+    },
+    {
+        name: 'city_gdynia',
+        label: 'Gdynia',
+    },
+    {
+        name: 'city_sopot',
+        label: 'Sopot',
+    },
+
+]
 
 
 
@@ -12,7 +52,9 @@ Dropdown, MenuItem, ButtonToolbar} from 'react-bootstrap'
           const {
               FilterUpdate,
               searchUpdate,
-              search
+              search,
+              activeFilter,
+              resetFilter
           } = this.props
 
 
@@ -36,30 +78,37 @@ Dropdown, MenuItem, ButtonToolbar} from 'react-bootstrap'
                         </Button>
                         <Dropdown.Toggle bsStyle="success"/>
                         <Dropdown.Menu className="super-colors">
-                            <MenuItem eventKey="1" onClick={
-                                () => FilterUpdate('city_gdansk', true)}>Gdańsk</MenuItem>
-                            <MenuItem eventKey="2" onClick={
-                                () => FilterUpdate('city_gdynia', true)}>Gdynia</MenuItem>
-                            <MenuItem eventKey="3" onClick={
-                                () => FilterUpdate('city_sopot', true)}>Sopot</MenuItem>
+                            {
+                                cityFilters.map(
+
+                                    filter => {
+                                        const isActive = activeFilter.includes(filter.name)
+                                        return (
+                            <MenuItem eventKey="1" keu={filter.name} active={isActive} onClick={
+                                () => FilterUpdate(filter.name, !isActive)}>{filter.label}</MenuItem>)})}
+                            <MenuItem divider />
+                            <MenuItem eventKey="4" onClick={resetFilter}>Wszystko</MenuItem>
                             </Dropdown.Menu>
                     </Dropdown>
                     </ButtonToolbar>
                           {' '}
                           <ButtonGroup>
-                            <Button onClick={
-                                () => FilterUpdate('type_kino', true)
-                            }>Kino</Button>
-                            <Button onClick={
-                                () => FilterUpdate('type_koncert', true)}>Koncert</Button>
-                              <Button onClick={
-                                  () => FilterUpdate('type_kultura', true)}>Kultura</Button>
-                              <Button onClick={
-                                  () => FilterUpdate('type_clubbing', true)}>Clubbing</Button>
-                              <Button onClick={
-                                  () => FilterUpdate('type_sport', true)}>Sport</Button>
+                              {
+                                  typeFilters.map(
+                                      filter => {
+                                          const isActive = activeFilter.includes(filter.name)
+                                          return (
+                            <Button key={filter.name} active={isActive} onClick={
+                                () => FilterUpdate(filter.name, !isActive)
+                            }>{filter.label}</Button>)}
+                            )}
+
+
                           </ButtonGroup>
                         </div>
+
+
+
       </form>
 
 
