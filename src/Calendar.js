@@ -1,5 +1,5 @@
 import React from 'react'
-import {Grid, Table, Jumbotron, Button} from 'react-bootstrap'
+import {Col, Grid, Table, Jumbotron, Button} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import Filter from './Filter'
 
@@ -94,16 +94,7 @@ return (
             FilterUpdate={this.FilterUpdate}
             activeFilter={this.state.activeFilter}
             resetFilter={this.resetFilter}/>
-            <Table>
-            <thead>
-            <tr>
-                <th>Wydarzenia</th>
-                <th>Miasto</th>
-                <th>Data</th>
-                <th>Kategoria</th>
-            </tr>
-            </thead>
-            <tbody>
+            <div>
             {
                 this.state.events.filter(
                     eventt => (
@@ -119,22 +110,21 @@ return (
 
                 ).map(
                     eventt => (
-                        <tr key={eventt.id}>
-                            <td> <Jumbotron>
+                    <Col xs={12} md={8}>
+                            <Jumbotron key={eventt.id}>
 
                                 <h2>{eventt.Name}</h2>
+                                <p>Gdzie:{eventt.Town}</p>
+                                <p>Kiedy:{eventt.Date}</p>
                                 <p>{eventt.Type}</p>
                                 <p><Button onClick="" bsStyle="primary"><Link to={'/calendar/' + eventt.id}>Więcej</Link></Button></p>
-                            </Jumbotron></td>
-                            <td>{eventt.Town}</td>
-                            <td>{eventt.Date}</td>
-                            <td>{eventt.Type}</td>
-                        </tr>
+                            </Jumbotron>
+                    </Col>
+
                     )
                 )
             }
-            </tbody>
-                  </Table>
+            </div>
 
 
 

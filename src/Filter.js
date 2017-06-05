@@ -92,19 +92,26 @@ const cityFilters = [
                     </Dropdown>
                     </ButtonToolbar>
                           {' '}
-                          <ButtonGroup>
-                              {
-                                  typeFilters.map(
-                                      filter => {
-                                          const isActive = activeFilter.includes(filter.name)
-                                          return (
-                            <Button key={filter.name} active={isActive} onClick={
-                                () => FilterUpdate(filter.name, !isActive)
-                            }>{filter.label}</Button>)}
-                            )}
+                    <ButtonToolbar>
+                        <Dropdown id="dropdown-custom-3">
+                            <Button bsStyle="info">
+                                Wybierz  Kategorie
+                            </Button>
+                            <Dropdown.Toggle bsStyle="success"/>
+                            <Dropdown.Menu>
+                                {
+                                    typeFilters.map(
 
-
-                          </ButtonGroup>
+                                        filter => {
+                                            const isActive = activeFilter.includes(filter.name)
+                                            return (
+                                                <MenuItem eventKey="1" keu={filter.name} active={isActive} onClick={
+                                                    () => FilterUpdate(filter.name, !isActive)}>{filter.label}</MenuItem>)})}
+                                <MenuItem divider />
+                                <MenuItem eventKey="4" onClick={resetFilter}>Wszystko</MenuItem>
+                            </Dropdown.Menu>
+                        </Dropdown>
+                    </ButtonToolbar>
                         </div>
 
 
