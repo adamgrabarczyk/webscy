@@ -84,7 +84,7 @@ const cityFilters = [
                                     filter => {
                                         const isActive = activeFilter.includes(filter.name)
                                         return (
-                            <MenuItem eventKey="1" keu={filter.name} active={isActive} onClick={
+                            <MenuItem eventKey="1" key={filter.name} active={isActive} onClick={
                                 () => FilterUpdate(filter.name, !isActive)}>{filter.label}</MenuItem>)})}
                             <MenuItem divider />
                             <MenuItem eventKey="4" onClick={resetFilter}>Wszystko</MenuItem>
