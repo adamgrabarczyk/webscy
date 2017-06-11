@@ -21,23 +21,29 @@ const WebbscyApp = () => (
             <Navbar>
                 <Navbar.Header>
                     <Navbar.Brand>
-                        <a href="#">React-Bootstrap</a>
+                        <a href="#">GdańskEvents</a>
                     </Navbar.Brand>
+                    <Navbar.Toggle />
                 </Navbar.Header>
-                <Nav>
-
-                    <LinkContainer to="/">
-                        <NavItem>Logowanie</NavItem>
-                    </LinkContainer>
-
-                    <LinkContainer to="/calendar">
-                        <NavItem>Kalendarz</NavItem>
-                    </LinkContainer>
-
-                    <LinkContainer to="/signin">
-                        <NavItem>Samba</NavItem>
-                    </LinkContainer>
-                </Nav>
+               <Nav>
+                <Navbar.Collapse>
+                    <Navbar.Text>
+                        <LinkContainer to="/">
+                            <Navbar.Link>Logowanie</Navbar.Link>
+                        </LinkContainer>
+                    </Navbar.Text>
+                    <Navbar.Text>
+                        <LinkContainer to="/calendar">
+                            <Navbar.Link>Kalendarz</Navbar.Link>
+                        </LinkContainer>
+                    </Navbar.Text>
+                    <Navbar.Text>
+                        <LinkContainer to="/signin">
+                            <Navbar.Link>Samba</Navbar.Link>
+                        </LinkContainer>
+                    </Navbar.Text>
+                </Navbar.Collapse>
+               </Nav>
             </Navbar>
 
 
