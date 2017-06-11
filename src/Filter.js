@@ -62,6 +62,10 @@ class Filter extends React.Component {
             item => activeFilter.includes(item.name)
         )
 
+        const selectedTypeFilter = typeFilters.find(
+            item => activeFilter.includes(item.name)
+        )
+
         return (
             <form>
                 <FormGroup>
@@ -100,7 +104,7 @@ class Filter extends React.Component {
                     <ButtonToolbar>
                         <Dropdown id="dropdown-custom-3">
                             <Button bsStyle="info">
-                                Wybierz Kategorie
+                                {selectedTypeFilter !== undefined ? selectedTypeFilter.label : 'Wybierz Kategorie'}
                             </Button>
                             <Dropdown.Toggle bsStyle="success"/>
                             <Dropdown.Menu>

@@ -2,6 +2,7 @@ import React from 'react'
 import {Col, Grid, Table, Jumbotron, Button} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 import Filter from './Filter'
+import  {LinkContainer} from 'react-router-bootstrap'
 
 const filters = {
     word: (eventt, search) => [
@@ -114,7 +115,7 @@ class Events extends React.Component {
                                             <p>Gdzie:{eventt.Town}</p>
                                             <p>Kiedy:{eventt.Date}</p>
                                             <p>{eventt.Type}</p>
-                                            <p><Button onClick="" bsStyle="primary"><Link to={'/calendar/' + eventt.id}>Więcej</Link></Button>
+                                            <p><LinkContainer to={'/calendar/' + eventt.id}><Button onClick="" bsStyle="primary">Więcej</Button></LinkContainer>
                                             </p>
                                         </Jumbotron>
                                     </Col>
