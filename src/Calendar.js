@@ -1,6 +1,6 @@
 import React from 'react'
 import {Col, Grid, Table, Jumbotron, Button} from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import Filter from './Filter'
 
 const filters = {
@@ -39,8 +39,8 @@ class Events extends React.Component {
         }
 
         this.searchUpdate = event => this.setState({
-            search: event.target.value
-        },
+                search: event.target.value
+            },
 
             () => this.setState({
                 activeFilter: this.state.activeFilter.filter(
@@ -48,17 +48,17 @@ class Events extends React.Component {
                 ).concat(this.state.search === '' ? [] : 'word')
             }))
 
-this.FilterUpdate = (filterType, enabled) => this.setState({
-    activeFilter:this.state.activeFilter.filter(
-        type => {
-            const selectedPrefix = filterType.split('_')[0]
-            const currentPrefix = type.split('_')[0]
-            return selectedPrefix !== currentPrefix
-        }
-    ).concat(enabled === true ? filterType : [])
-})
+        this.FilterUpdate = (filterType, enabled) => this.setState({
+            activeFilter: this.state.activeFilter.filter(
+                type => {
+                    const selectedPrefix = filterType.split('_')[0]
+                    const currentPrefix = type.split('_')[0]
+                    return selectedPrefix !== currentPrefix
+                }
+            ).concat(enabled === true ? filterType : [])
+        })
 
-        this.resetFilter = () => this.setState ({
+        this.resetFilter = () => this.setState({
             activeFilter: [],
             search: ''
 
@@ -85,53 +85,50 @@ this.FilterUpdate = (filterType, enabled) => this.setState({
     }
 
     render() {
-return (
-<Grid>
-        <div>
-            <h2>Calendar</h2>
-            <Filter search={this.state.search}
-            searchUpdate={this.searchUpdate}
-            FilterUpdate={this.FilterUpdate}
-            activeFilter={this.state.activeFilter}
-            resetFilter={this.resetFilter}/>
-            <div>
-            {
-                this.state.events.filter(
-                    eventt => (
+        return (
+            <Grid>
+                <div>
+                    <h2>Calendar</h2>
+                    <Filter search={this.state.search}
+                            searchUpdate={this.searchUpdate}
+                            FilterUpdate={this.FilterUpdate}
+                            activeFilter={this.state.activeFilter}
+                            resetFilter={this.resetFilter}/>
+                    <div>
+                        {
+                            this.state.events.filter(
+                                eventt => (
 
-                        this.state.activeFilter.map(
-                            filaterName => filters[filaterName]
-                        ).every(
-                            func => func(eventt, this.state.search)
-                        )
-                    )
+                                    this.state.activeFilter.map(
+                                        filaterName => filters[filaterName]
+                                    ).every(
+                                        func => func(eventt, this.state.search)
+                                    )
+                                )
+                            ).map(
+                                eventt => (
+                                    <Col xs={12} md={8}>
+                                        <Jumbotron key={eventt.id}>
 
+                                            <h2>{eventt.Name}</h2>
+                                            <p>Gdzie:{eventt.Town}</p>
+                                            <p>Kiedy:{eventt.Date}</p>
+                                            <p>{eventt.Type}</p>
+                                            <p><Button onClick="" bsStyle="primary"><Link to={'/calendar/' + eventt.id}>Więcej</Link></Button>
+                                            </p>
+                                        </Jumbotron>
+                                    </Col>
 
-
-                ).map(
-                    eventt => (
-                    <Col xs={12} md={8}>
-                            <Jumbotron key={eventt.id}>
-
-                                <h2>{eventt.Name}</h2>
-                                <p>Gdzie:{eventt.Town}</p>
-                                <p>Kiedy:{eventt.Date}</p>
-                                <p>{eventt.Type}</p>
-                                <p><Button onClick="" bsStyle="primary"><Link to={'/calendar/' + eventt.id}>Więcej</Link></Button></p>
-                            </Jumbotron>
-                    </Col>
-
-                    )
-                )
-            }
-            </div>
+                                )
+                            )
+                        }
+                    </div>
 
 
-
-
-        </div>
-</Grid>
-)}
+                </div>
+            </Grid>
+        )
     }
+}
 
 export default Events
