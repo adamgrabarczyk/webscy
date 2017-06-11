@@ -1,27 +1,31 @@
 [
   {
     "id": "1",
-    "imie": "Hicks",
-    "nazwisko": "Jenkins",
-    "email": "hicksjenkins@kneedles.com"
+    "imie": "Adam",
+    "nazwisko": "Grabarczyk",
+    "email": "adam@adam.com",
+    "password": "adam1234"
   },
   {
     "id": "2",
-    "imie": "Morgan",
-    "nazwisko": "Houston",
-    "email": "morganhouston@kneedles.com"
+    "imie": "Błażej",
+    "nazwisko": "Wielgosz",
+    "email": "wielgosz@webap.pl",
+    "password": "dupa1234"
   },
   {
     "id": "3",
-    "imie": "Aguirre",
-    "nazwisko": "Spears",
-    "email": "aguirrespears@kneedles.com"
+    "imie": "Daniel",
+    "nazwisko": "Peta",
+    "email": "daniel@daniel.com",
+    "password": "daniel1234"
   },
   {
     "id": "4",
-    "imie": "Mitchell",
-    "nazwisko": "Horton",
-    "email": "mitchellhorton@kneedles.com"
+    "imie": "Sławek",
+    "nazwisko": "Malitka",
+    "email": "slawek@slawek.com",
+    "password": "slawek1234"
   },
   {
     "id": "5",
