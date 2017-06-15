@@ -61,7 +61,7 @@ class Events extends React.Component {
 
         this.resetFilter = () => this.setState({
             activeFilter: [],
-            search: ''
+
 
         })
 

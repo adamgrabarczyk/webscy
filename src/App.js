@@ -11,7 +11,7 @@ import {LinkContainer} from 'react-router-bootstrap'
 
 import Home from './Home'
 import Events from './Calendar'
-import SingIn from './Singin'
+import SingIn from './Signin'
 import Event from './Event'
 
 
