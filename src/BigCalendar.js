@@ -13,7 +13,7 @@ const MyCalendar = props => (
             startAccessor='startDate'
             endAccessor='endDate'
             messages={{
-                today: 'Bieżący miesiąc',
+                today: 'przeiwń',
                 previous: '<',
                 next: '>',
                 month: 'miesiąc',
