@@ -3,6 +3,8 @@ import {Col, Grid, Table, Jumbotron, Button} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 import Filter from './Filter'
 import  {LinkContainer} from 'react-router-bootstrap'
+import MyCalendar from './BigCalendar'
+
 
 const filters = {
     word: (eventt, search) => [
@@ -89,6 +91,10 @@ class Events extends React.Component {
         return (
             <Grid>
                 <div>
+                    <div>
+                        <MyCalendar/>
+                    </div>
+
                     <h2>Calendar</h2>
                     <Filter search={this.state.search}
                             searchUpdate={this.searchUpdate}
