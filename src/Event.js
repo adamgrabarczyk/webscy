@@ -51,7 +51,7 @@ import React from 'react'
                                   }
                               </li>
                               <li>
-                                  Gdzie?:
+                                  Lokalizacja:
                                   {' '}
                                   {
                                       eventt ?
