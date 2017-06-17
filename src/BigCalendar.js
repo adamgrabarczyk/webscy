@@ -6,12 +6,18 @@ import {connect} from 'react-redux'
 BigCalendar.momentLocalizer(moment);
 moment.locale("pl");
 
+
+
 const MyCalendar = props => (
-    <div style={{height: 200}}>
+    <div style={{height: 600}}>
         <BigCalendar
-            events={[]}
-            startAccessor='startDate'
-            endAccessor='endDate'
+            events={props.events.map(event => ({
+                ...event,
+                title: event.Name,
+                start: new Date(event.Date),
+                end: new Date(event.Date)
+            }))}
+
             messages={{
                 today: 'przeiwń',
                 previous: '<',

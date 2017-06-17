@@ -92,7 +92,7 @@ class Events extends React.Component {
             <Grid>
                 <div>
                     <div>
-                        <MyCalendar/>
+                        <MyCalendar events={this.state.events}/>
                     </div>
 
                     <h2>Calendar</h2>
