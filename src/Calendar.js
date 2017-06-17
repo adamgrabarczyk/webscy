@@ -118,7 +118,7 @@ class Events extends React.Component {
                                         <Jumbotron key={eventt.id}>
 
                                             <h2>{eventt.Name}</h2>
-                                            <p>Gdzie:{eventt.Town}</p>
+                                            <p>Lokalizacja:{eventt.Town}</p>
                                             <p>Kiedy:{eventt.Date}</p>
                                             <p>{eventt.Type}</p>
                                             <p><LinkContainer to={'/calendar/' + eventt.id}><Button onClick="" bsStyle="primary">Więcej</Button></LinkContainer>
