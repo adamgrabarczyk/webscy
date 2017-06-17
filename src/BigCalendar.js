@@ -9,17 +9,17 @@ moment.locale("pl");
 
 
 const MyCalendar = props => (
-    <div style={{height: 600}}>
+    <div style={{height: 350}}>
         <BigCalendar
             events={props.events.map(event => ({
                 ...event,
-                title: event.Name,
+                title: event.Name ,
                 start: new Date(event.Date),
                 end: new Date(event.Date)
             }))}
 
             messages={{
-                today: 'przeiwń',
+                today: 'w tym miesiącu',
                 previous: '<',
                 next: '>',
                 month: 'miesiąc',

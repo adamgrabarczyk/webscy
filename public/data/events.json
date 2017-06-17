@@ -3,7 +3,7 @@
     "id": 1,
     "Name": "Gdańsk Dźwiga Muze",
     "Town": "Gdańsk",
-    "Date": "2017-06-17",
+    "Date": "07-17-17",
     "Type": "Koncert",
     "Price": 100,
     "Place": "Plac Zebrań Ludowych"
@@ -12,7 +12,7 @@
     "id": 2,
     "Name": "Kinowy Dzień Dziecka",
     "Town": "Gdańsk",
-    "Date": "1-06-17",
+    "Date": "07-11-17",
     "Type": "Kino",
     "Price": 20,
     "Place": "Alfa Centrum"
@@ -21,7 +21,7 @@
     "id": 3,
     "Name": "Kino Letnie Sopot",
     "Town": "Sopot",
-    "Date": "10-07-17",
+    "Date": "07-10-17",
     "Type": "Kino",
     "Price": 0,
     "Place": "Plaża Sopot"
@@ -30,7 +30,7 @@
     "id": 4,
     "Name": "Gala KSW MMA",
     "Town": "Gdańsk",
-    "Date": "27-05-17",
+    "Date": "07-08-17",
     "Type": "Sport",
     "Price": 250,
     "Place": "Ergo Arena"
@@ -39,7 +39,7 @@
     "id": 5,
     "Name": "Spektakl Szekspirowki",
     "Town": "Gdynia",
-    "Date": "10-05-17",
+    "Date": "07-30-17",
     "Type": "Kultura",
     "Price": 35,
     "Place": "Teatr Muzyczny"
@@ -48,7 +48,7 @@
     "id": 6,
     "Name": "Festiwal filmów fabularnych",
     "Town": "Gdynia",
-    "Date": "15-08-17",
+    "Date": "07-19-17",
     "Type": "Kino",
     "Price": 20,
     "Place": "Gemini"
@@ -57,7 +57,7 @@
     "id": 7,
     "Name": "Mecz Polska-Niemcy",
     "Town": "Gdańsk",
-    "Date": "10-10-17",
+    "Date": "07-21-17",
     "Type": "Sport",
     "Price": 330,
     "Place": "Stadion AMBER EXPO"
@@ -66,7 +66,7 @@
     "id": 8,
     "Name": "Balet Jezioro Łabędzie",
     "Town": "Gdańsk",
-    "Date": "02-08-17",
+    "Date": "07-22-17",
     "Type": "Kultura",
     "Price": 15,
     "Place": "Opera Bałtycka"
@@ -75,7 +75,7 @@
     "id": 9,
     "Name": "Asseco Gdynia vs Trefl Sopot",
     "Town": "Gdynia",
-    "Date": "30-02-17",
+    "Date": "07-13-17",
     "Type": "Sport",
     "Price": 10,
     "Place": "Hala sportowo-widowiskowa"
@@ -84,7 +84,7 @@
     "id": 10,
     "Name": "Karaoke",
     "Town": "Gdańsk",
-    "Date": "1-09-17",
+    "Date": "07-28-17",
     "Type": "Clubbing",
     "Price": 10,
     "Place": "Miasto Aniłów"
@@ -93,7 +93,7 @@
     "id": 11,
     "Name": "Dzień mamy pod chmurką",
     "Town": "Sopot",
-    "Date": "03-12-17",
+    "Date": "07-14-17",
     "Type": "Koncert",
     "Price": 0,
     "Place": "Przed szkkoła nr 3"
@@ -102,7 +102,7 @@
     "id": 12,
     "Name": "Jay-Z",
     "Town": "Sopot",
-    "Date": "02-06-17",
+    "Date": "07-07-17",
     "Type": "Koncert",
     "Price": 180,
     "Place": "Ergo Arena"
@@ -120,7 +120,7 @@
     "id": 14,
     "Name": "Mikołajki",
     "Town": "Gdynia",
-    "Date": "06-12-17",
+    "Date": "07-01-17",
     "Type": "Clubbing",
     "Price": 10,
     "Place": "No to Cyk"
@@ -129,7 +129,7 @@
     "id": 15,
     "Name": "Festiwal Baletu",
     "Town": "Gdańsk",
-    "Date": "19-08-17",
+    "Date": "06-17-17",
     "Type": "Kultura",
     "Price": 24,
     "Place": "Teatr miniatura"
@@ -138,7 +138,7 @@
     "id": 16,
     "Name": "Mecz Polska-Szwecja",
     "Town": "Gdańsk",
-    "Date": "10-02-18",
+    "Date": "06-18-17",
     "Type": "Sport",
     "Price": 350,
     "Place": "Stadion AMBER EXPO"
@@ -147,7 +147,7 @@
     "id": 17,
     "Name": "Taniec Wspólczesny Pająk",
     "Town": "Gdynia",
-    "Date": "08-08-17",
+    "Date": "07-25-17",
     "Type": "Kultura",
     "Price": 15,
     "Place": "Teatr Muzyczny"
@@ -156,7 +156,7 @@
     "id": 18,
     "Name": "Asseco Gdynia vs Stelmet Zielona Góra",
     "Town": "Gdynia",
-    "Date": "17-04-18",
+    "Date": "07-10-17",
     "Type": "Sport",
     "Price": 10,
     "Place": "Hala sportowo-widowiskowa"
@@ -165,7 +165,7 @@
     "id": 19,
     "Name": "Męskie Granie",
     "Town": "Gdańsk",
-    "Date": "11-09-17",
+    "Date": "08-17-17",
     "Type": "Koncert",
     "Price": 45,
     "Place": "Plac Zebrań Ludowych"
@@ -183,7 +183,7 @@
     "id": 21,
     "Name": "Wiedźmin Premiera",
     "Town": "Gdańsk",
-    "Date": "10-12-17",
+    "Date": "07-05-17",
     "Type": "Kino",
     "Price": 35,
     "Place": "Multikino"
@@ -192,7 +192,7 @@
     "id": 22,
     "Name": "Kliczko vs Adamek",
     "Town": "Gdańsk",
-    "Date": "02-09-17",
+    "Date": "08-10-17",
     "Type": "Sport",
     "Price": 250,
     "Place": "Ergo Arena"
@@ -210,7 +210,7 @@
     "id": 24,
     "Name": "Festiwal filmów dokumentalnych",
     "Town": "Gdynia",
-    "Date": "16-08-17",
+    "Date": "07-23-17",
     "Type": "Kino",
     "Price": 20,
     "Place": "Gemini"
@@ -219,7 +219,7 @@
     "id": 25,
     "Name": "Mecz Polska-Chorwacja",
     "Town": "Gdańsk",
-    "Date": "10-11-17",
+    "Date": "08-03-17",
     "Type": "Sport",
     "Price": 330,
     "Place": "Stadion AMBER EXPO"
@@ -228,7 +228,7 @@
     "id": 26,
     "Name": "Balet Kelner",
     "Town": "Gdańsk",
-    "Date": "11-09-17",
+    "Date": "06-29-17",
     "Type": "Kultura",
     "Price": 15,
     "Place": "Opera Bałtycka"
@@ -237,7 +237,7 @@
     "id": 27,
     "Name": "Trefl Sopot vs Los Angeles Lakers",
     "Town": "Sopot",
-    "Date": "19-03-18",
+    "Date": "07-31-17",
     "Type": "Sport",
     "Price": 50,
     "Place": "Ergo Arena"
@@ -246,7 +246,7 @@
     "id": 28,
     "Name": "Karaoke przy piwie",
     "Town": "Gdańsk",
-    "Date": "28-09-17",
+    "Date": "06-30-17",
     "Type": "Clubbing",
     "Price": 0,
     "Place": "Zimne Nóżki"
@@ -255,7 +255,7 @@
     "id": 29,
     "Name": "Festiwal Muzyki Rozrywkowej",
     "Town": "Sopot",
-    "Date": "12-07-17",
+    "Date": "08-30-17",
     "Type": "Koncert",
     "Price": 35,
     "Place": "Opera Leśna"
@@ -264,7 +264,7 @@
     "id": 30,
     "Name": "Opener Festiwal",
     "Town": "Gdynia",
-    "Date": "02-07-17",
+    "Date": "07-04-17",
     "Type": "Koncert",
     "Price": 450,
     "Place": "Lotnisko Kosakowo"
@@ -273,7 +273,7 @@
     "id": 31,
     "Name": "Juwenalia",
     "Town": "Gdańsk",
-    "Date": "25-05-17",
+    "Date": "06-09-17",
     "Type": "Koncert",
     "Price": 25,
     "Place": "Uniwersytet Gdański"
@@ -291,7 +291,7 @@
     "id": 33,
     "Name": "Delfinalia",
     "Town": "Gdynia",
-    "Date": "10-06-17",
+    "Date": "10-17-17",
     "Type": "Koncert",
     "Price": 10,
     "Place": "Skwer Kościuszki"
