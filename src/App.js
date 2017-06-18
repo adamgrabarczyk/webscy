@@ -10,7 +10,7 @@ import {LinkContainer} from 'react-router-bootstrap'
 
 
 import Home from './Home'
-import Events from './Calendar'
+import Calendar from './Calendar'
 import Event from './Event'
 
 
@@ -44,7 +44,7 @@ const WebbscyApp = () => (
             <hr/>
 
             <Route exact path="/" component={Home}/>
-            <Route exact path="/calendar" component={Events}/>
+            <Route exact path="/calendar" component={Calendar}/>
             <Route path="/calendar/:eventtId" component={Event}/>
         </div>
     </Router>

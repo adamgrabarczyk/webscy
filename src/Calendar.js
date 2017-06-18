@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import Filter from './Filter'
 import  {LinkContainer} from 'react-router-bootstrap'
 import MyCalendar from './BigCalendar'
-
+import FavoriteEvents from './FavoriteEvents'
 
 const filters = {
     word: (eventt, search) => [
@@ -29,7 +29,7 @@ const filters = {
 }
 
 
-class Events extends React.Component {
+class Calendar extends React.Component {
 
     constructor(props) {
         super(props)
@@ -38,7 +38,8 @@ class Events extends React.Component {
             events: JSON.parse(localStorage.getItem('events')) || [],
             search: '',
             activeFilter: [],
-            filterByType: false
+            filterByType: false,
+            favoriteEventIds: []
         }
 
         this.searchUpdate = event => this.setState({
@@ -61,8 +62,10 @@ class Events extends React.Component {
             ).concat(enabled === true ? filterType : [])
         })
 
-        this.resetFilter = () => this.setState({
-            activeFilter: [],
+        this.resetFilter = (prefix) => this.setState({
+            activeFilter: this.state.activeFilter.filter(
+                item => item.indexOf(prefix) !== 0
+            ),
 
 
         })
@@ -88,11 +91,15 @@ class Events extends React.Component {
     }
 
     render() {
+        console.log(this.props)
         return (
             <Grid>
                 <div>
                     <div>
-                        <MyCalendar events={this.state.events}/>
+                        <MyCalendar events={this.state.events} history={this.props.history}/>
+                        <FavoriteEvents events={this.state.events.filter(
+                            event => this.state.favoriteEventIds.includes(event.id)
+                        )}/>
                     </div>
 
                     <h2>Calendar</h2>
@@ -123,6 +130,13 @@ class Events extends React.Component {
                                             <p>{eventt.Type}</p>
                                             <p><LinkContainer to={'/calendar/' + eventt.id}><Button onClick="" bsStyle="primary">Więcej</Button></LinkContainer>
                                             </p>
+                                            <p> <button onClick={() => {
+                                                this.setState({
+                                                    favoriteEventIds: this.state.favoriteEventIds.filter(
+                                                        id => id !== eventt.id
+                                                    ).concat(eventt.id)
+                                                })
+                                            }}>+</button></p>
                                         </Jumbotron>
                                     </Col>
 
@@ -138,4 +152,4 @@ class Events extends React.Component {
     }
 }
 
-export default Events
+export default Calendar
