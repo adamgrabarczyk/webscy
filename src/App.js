@@ -1,10 +1,10 @@
 import React from 'react'
 import {
-    BrowserRouter as Router,
-    Route,
+  BrowserRouter as Router,
+  Route,
 } from 'react-router-dom'
 import {
-    Nav, Navbar, NavItem,
+  Nav, Navbar, NavItem,
 } from 'react-bootstrap'
 import {LinkContainer} from 'react-router-bootstrap'
 import firebase from 'firebase'
@@ -25,39 +25,70 @@ const config = {
 firebase.initializeApp(config);
 
 
-const WebbscyApp = () => (
-    <Router>
+export default class App extends React.Component {
+
+  state = {
+    user: null
+  }
+
+  componentWillMount() {
+    firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+        this.setState({
+          user: user
+        })
+      } else {
+        this.setState({
+          user: null
+        })
+      }
+    });
+  }
+
+  render() {
+    return (
+
+      <Router>
         <div>
-            <Navbar>
-                <Navbar.Header>
-                    <Navbar.Brand>
+          <div>
+            {
+              this.state.user === null ?
+                <Route exact path="/" component={Home}/> :
+                <div>
+                  <Navbar>
+                    <Navbar.Header>
+                      <Navbar.Brand>
                         <a href="#">GdańskEvents</a>
-                    </Navbar.Brand>
-                    <Navbar.Toggle />
-                </Navbar.Header>
-               <Nav>
-                <Navbar.Collapse>
-                    <Navbar.Text>
-                        <LinkContainer to="/">
-                            <Navbar.Link>Logowanie</Navbar.Link>
-                        </LinkContainer>
-                    </Navbar.Text>
-                    <Navbar.Text>
-                        <LinkContainer to="/calendar">
+                      </Navbar.Brand>
+                      <Navbar.Toggle />
+                    </Navbar.Header>
+                    <Nav>
+                      <Navbar.Collapse>
+                        <Navbar.Text>
+                          <LinkContainer to="/">
+                            <Navbar.Link onClick={() => firebase.auth().signOut()}>Hello {this.state.user.email}
+                              Wyloguj</Navbar.Link>
+                          </LinkContainer>
+                        </Navbar.Text>
+                        <Navbar.Text>
+                          <LinkContainer to="/calendar">
                             <Navbar.Link>Kalendarz</Navbar.Link>
-                        </LinkContainer>
-                    </Navbar.Text>
-                </Navbar.Collapse>
-               </Nav>
-            </Navbar>
-
-
-            <hr/>
-
-            <Route exact path="/" component={Home}/>
-            <Route exact path="/calendar" component={Events}/>
-            <Route path="/calendar/:eventtId" component={Event}/>
+                          </LinkContainer>
+                        </Navbar.Text>
+                      </Navbar.Collapse>
+                    </Nav>
+                  </Navbar>
+                  <div>
+                    <p>ala ma kota</p>
+                  </div>
+                  <Route exact path="/calendar" component={Events}/>
+                  <Route path="/calendar/:eventtId" component={Event}/>
+                </div>
+            }
+          </div>
         </div>
-    </Router>
-)
-export default WebbscyApp
+      </Router>
+
+    )
+  }
+}
