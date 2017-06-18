@@ -1,32 +1,21 @@
 import React from 'react'
-import {Button} from 'react-bootstrap'
+import SignInForm from './SignInForm'
 
 const Home = () => (
 
-    <div id="titlle" classID="container">
-        <div>
-            <h2>Home</h2>
-        </div>
-<div id="modal">
-
-
-
-<div id="signup">
-    <h4>Zarejestuj się</h4>
-    <Button>SignUp</Button>
-
-</div>
+  <div id="titlle" classID="container">
     <div>
+      <h2>Home</h2>
+    </div>
+    <div id="modal">
+
+      <div>
         <h4>Zaloguj się</h4>
-        <Button>SignIn</Button>
-
+        <SignInForm/>
+      </div>
     </div>
 
-</div>
-
-
-
-    </div>
+  </div>
 )
 
 export default Home
