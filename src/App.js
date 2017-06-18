@@ -65,16 +65,15 @@ export default class App extends React.Component {
                     <Nav>
                       <Navbar.Collapse>
                         <Navbar.Text>
-                          <LinkContainer to="/">
-                            <Navbar.Link onClick={() => firebase.auth().signOut()}>Wyloguj</Navbar.Link>
-                          </LinkContainer>
-                        </Navbar.Text>
-                        <Navbar.Text>
                           <LinkContainer to="/calendar">
                             <Navbar.Link>Kalendarz</Navbar.Link>
                           </LinkContainer>
                         </Navbar.Text>
                       </Navbar.Collapse>
+                    </Nav>
+                    <Nav pullRight>
+                      <NavItem>{this.state.user.email}</NavItem>
+                      <NavItem onClick={() => firebase.auth().signOut()}> (Wyloguj)</NavItem>
                     </Nav>
                   </Navbar>
                   <Route exact path="/calendar" component={Calendar}/>
