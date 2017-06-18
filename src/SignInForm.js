@@ -25,9 +25,8 @@ export default class SignInForm extends React.Component {
   render() {
     return (
       <div>
-        <h3>Sign in</h3>
         <form onSubmit={this.handleSubmit}>
-          e-mail:
+          <div>e-mail<br /></div>
           <input
             type="text"
             value={this.state.email}
@@ -35,17 +34,18 @@ export default class SignInForm extends React.Component {
             onChange={this.handleChange}
           />
           <br/>
-          password:
+          <div>hasło<br /></div>
           <input
             type="password"
             value={this.state.password}
             name="password"
             onChange={this.handleChange}
           />
-          <br />
-          <button type="submit">Sign in</button>
+          <br /><br />
+          <button type="submit">zaloguj się</button>
+          <br /><br />
         </form>
       </div>
-    )
+  )
   }
-}
+  }
