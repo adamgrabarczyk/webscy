@@ -18,7 +18,6 @@ const MyCalendar = props => (
                 end: new Date(event.Date)
             }))}
             onSelectEvent={ event => {
-                console.log(event)
                 props.history.push('/calendar/' + event.id)
             }}
 

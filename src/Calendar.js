@@ -90,6 +90,15 @@ class Calendar extends React.Component {
 
     }
 
+    removeFromFavs = eventId => {
+        this.setState({
+            favoriteEventIds: this.state.favoriteEventIds.filter(
+                id => id !== eventId
+            )
+        })
+
+    }
+
     render() {
         console.log(this.props)
         return (
@@ -97,7 +106,7 @@ class Calendar extends React.Component {
                 <div>
                     <div>
                         <MyCalendar events={this.state.events} history={this.props.history}/>
-                        <FavoriteEvents events={this.state.events.filter(
+                        <FavoriteEvents remove={this.removeFromFavs} events={this.state.events.filter(
                             event => this.state.favoriteEventIds.includes(event.id)
                         )}/>
                     </div>
