@@ -17,6 +17,11 @@ const MyCalendar = props => (
                 start: new Date(event.Date),
                 end: new Date(event.Date)
             }))}
+            onSelectEvent={ event => {
+                console.log(event)
+                props.history.push('/calendar/' + event.id)
+            }}
+
 
             messages={{
                 today: 'w tym miesiącu',

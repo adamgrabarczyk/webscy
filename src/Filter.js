@@ -96,7 +96,7 @@ class Filter extends React.Component {
                                         )
                                 }
                                 <MenuItem divider/>
-                                <MenuItem eventKey="4" onClick={resetFilter}>Wszystko</MenuItem>
+                                <MenuItem eventKey="4" onClick={() => resetFilter('city')}>Wszystko</MenuItem>
                             </Dropdown.Menu>
                         </Dropdown>
                     </ButtonToolbar>
@@ -117,7 +117,7 @@ class Filter extends React.Component {
                                                     () => FilterUpdate(filter.name, !isActive)}>{filter.label}</MenuItem>)
                                         })}
                                 <MenuItem divider/>
-                                <MenuItem eventKey="4" onClick={resetFilter}>Wszystko</MenuItem>
+                                <MenuItem eventKey="4" onClick={() => resetFilter('type')}>Wszystko</MenuItem>
                             </Dropdown.Menu>
                         </Dropdown>
                     </ButtonToolbar>
