@@ -2,4 +2,7 @@
   text-align: center;
 }
 
-
+.logo {
+  height: 150%;
+  margin-top: -5px;
+}

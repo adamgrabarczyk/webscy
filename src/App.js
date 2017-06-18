@@ -7,11 +7,22 @@ import {
     Nav, Navbar, NavItem,
 } from 'react-bootstrap'
 import {LinkContainer} from 'react-router-bootstrap'
-
+import firebase from 'firebase'
 
 import Home from './Home'
 import Events from './Calendar'
 import Event from './Event'
+
+// Initialize Firebase
+const config = {
+  apiKey: "AIzaSyBnxUTHBH4BQymDUZWRcwJeKVdZ6lNueWk",
+  authDomain: "jfdz4-webscy-app.firebaseapp.com",
+  databaseURL: "https://jfdz4-webscy-app.firebaseio.com",
+  projectId: "jfdz4-webscy-app",
+  storageBucket: "jfdz4-webscy-app.appspot.com",
+  messagingSenderId: "698642858395"
+};
+firebase.initializeApp(config);
 
 
 const WebbscyApp = () => (
