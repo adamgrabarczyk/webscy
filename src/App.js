@@ -11,7 +11,6 @@ import {LinkContainer} from 'react-router-bootstrap'
 
 import Home from './Home'
 import Events from './Calendar'
-import SingIn from './Singin'
 import Event from './Event'
 
 
@@ -37,11 +36,6 @@ const WebbscyApp = () => (
                             <Navbar.Link>Kalendarz</Navbar.Link>
                         </LinkContainer>
                     </Navbar.Text>
-                    <Navbar.Text>
-                        <LinkContainer to="/signin">
-                            <Navbar.Link>Samba</Navbar.Link>
-                        </LinkContainer>
-                    </Navbar.Text>
                 </Navbar.Collapse>
                </Nav>
             </Navbar>
@@ -52,7 +46,6 @@ const WebbscyApp = () => (
             <Route exact path="/" component={Home}/>
             <Route exact path="/calendar" component={Events}/>
             <Route path="/calendar/:eventtId" component={Event}/>
-            <Route path="/signin" component={SingIn}/>
         </div>
     </Router>
 )

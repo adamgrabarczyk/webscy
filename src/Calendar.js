@@ -2,6 +2,9 @@ import React from 'react'
 import {Col, Grid, Table, Jumbotron, Button} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 import Filter from './Filter'
+import  {LinkContainer} from 'react-router-bootstrap'
+import MyCalendar from './BigCalendar'
+
 
 const filters = {
     word: (eventt, search) => [
@@ -60,7 +63,7 @@ class Events extends React.Component {
 
         this.resetFilter = () => this.setState({
             activeFilter: [],
-            search: ''
+
 
         })
 
@@ -88,6 +91,10 @@ class Events extends React.Component {
         return (
             <Grid>
                 <div>
+                    <div>
+                        <MyCalendar events={this.state.events}/>
+                    </div>
+
                     <h2>Calendar</h2>
                     <Filter search={this.state.search}
                             searchUpdate={this.searchUpdate}
@@ -111,10 +118,10 @@ class Events extends React.Component {
                                         <Jumbotron key={eventt.id}>
 
                                             <h2>{eventt.Name}</h2>
-                                            <p>Gdzie:{eventt.Town}</p>
+                                            <p>Lokalizacja:{eventt.Town}</p>
                                             <p>Kiedy:{eventt.Date}</p>
                                             <p>{eventt.Type}</p>
-                                            <p><Button onClick="" bsStyle="primary"><Link to={'/calendar/' + eventt.id}>Więcej</Link></Button>
+                                            <p><LinkContainer to={'/calendar/' + eventt.id}><Button onClick="" bsStyle="primary">Więcej</Button></LinkContainer>
                                             </p>
                                         </Jumbotron>
                                     </Col>
