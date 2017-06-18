@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link} from 'react-router-dom'
 
 const FavoriteEvents = props => (
     <div style={{height: 350}}>
@@ -12,7 +12,7 @@ const FavoriteEvents = props => (
                         name: event.Name
                     })
                 ).map(
-                    item => <li>{item.name}</li>
+                    event => <li><Link to={'/calendar/' + event.id}>{event.name}</Link><button onClick={() => props.remove(event.id)}>-</button> </li>
                 )
             }
 
