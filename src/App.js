@@ -10,7 +10,7 @@ import {LinkContainer} from 'react-router-bootstrap'
 import firebase from 'firebase'
 
 import Home from './Home'
-import Events from './Calendar'
+import Calendar from './Calendar'
 import Event from './Event'
 
 // Initialize Firebase
@@ -66,8 +66,7 @@ export default class App extends React.Component {
                       <Navbar.Collapse>
                         <Navbar.Text>
                           <LinkContainer to="/">
-                            <Navbar.Link onClick={() => firebase.auth().signOut()}>Hello {this.state.user.email}
-                              Wyloguj</Navbar.Link>
+                            <Navbar.Link onClick={() => firebase.auth().signOut()}>Wyloguj</Navbar.Link>
                           </LinkContainer>
                         </Navbar.Text>
                         <Navbar.Text>
@@ -78,10 +77,7 @@ export default class App extends React.Component {
                       </Navbar.Collapse>
                     </Nav>
                   </Navbar>
-                  <div>
-                    <p>ala ma kota</p>
-                  </div>
-                  <Route exact path="/calendar" component={Events}/>
+                  <Route exact path="/calendar" component={Calendar}/>
                   <Route path="/calendar/:eventtId" component={Event}/>
                 </div>
             }
