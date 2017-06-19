@@ -35,11 +35,11 @@ class Calendar extends React.Component {
         super(props)
 
         this.state = {
-            events: JSON.parse(localStorage.getItem('events')) || [],
+            events: [],
             search: '',
             activeFilter: [],
             filterByType: false,
-            favoriteEventIds: []
+            favoriteEventIds: JSON.parse(localStorage.getItem('favoriteEventIds')) || []
         }
 
         this.searchUpdate = event => this.setState({
@@ -144,6 +144,8 @@ class Calendar extends React.Component {
                                                     favoriteEventIds: this.state.favoriteEventIds.filter(
                                                         id => id !== eventt.id
                                                     ).concat(eventt.id)
+                                                }, () => {
+                                                    localStorage.setItem('favoriteEventIds', JSON.stringify(this.state.favoriteEventIds))
                                                 })
                                             }}>+</button></p>
                                         </Jumbotron>
