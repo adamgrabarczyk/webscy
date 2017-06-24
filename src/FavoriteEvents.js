@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 const FavoriteEvents = props => (
     <div style={{height: 350}}>
         <h2>Ulubione</h2>
+
         <ul>
             {
                 props.events.map(

@@ -6,6 +6,7 @@ import App from './App';
 import './index.css';
 import './home.css'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
+import 'react-notifications/lib/notifications.css';
 
 
 ReactDOM.render(

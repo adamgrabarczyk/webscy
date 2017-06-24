@@ -1,6 +1,8 @@
 import React from 'react'
 import {Col, Grid, Table, Thumbnail, Button, Row} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
+import {NotificationContainer, NotificationManager} from 'react-notifications';
+
 import Filter from './Filter'
 import  {LinkContainer} from 'react-router-bootstrap'
 import MyCalendar from './BigCalendar'
@@ -101,11 +103,29 @@ class Calendar extends React.Component {
 
     }
 
+    createNotification = (type) => {
+        return () => {
+            switch (type) {
+                case 'info':
+                    NotificationManager.info('Jedno z wydarzeń, które dodałeś do ulubionych startuje dzisiaj');
+                    break;
+            }
+        };
+    };
+
+
+
     render() {
         console.log(this.props)
         return (
             <Grid>
                 <div>
+                    <div>
+                        <button className='btn btn-info'
+                                onClick={this.createNotification('info')}>Info
+                        </button>
+                        <NotificationContainer/>
+                    </div>
                     <Row className="show-grid">
                         <MyCalendar events={this.state.events} history={this.props.history}/>
                     <h2>Calendar</h2>
@@ -116,7 +136,7 @@ class Calendar extends React.Component {
                                                    resetFilter={this.resetFilter}/></Col>
                         <Col sm={6} md={7}>   <FavoriteEvents remove={this.removeFromFavs} events={this.state.events.filter(
                             event => this.state.favoriteEventIds.includes(event.id)
-                        )}/></Col>
+                        )} notification={this.createNotification('info')}/></Col>
                     </Row>
                     <div>
                         {
