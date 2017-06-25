@@ -2,6 +2,7 @@ import React from 'react'
 import {Col, Grid, Table, Thumbnail, Button, Row} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 import {NotificationContainer, NotificationManager} from 'react-notifications';
+import moment from 'moment';
 
 import Filter from './Filter'
 import  {LinkContainer} from 'react-router-bootstrap'
@@ -82,7 +83,17 @@ class Calendar extends React.Component {
                 events => this.setState({
                     events: events
                 }, () => {
-                    localStorage.setItem('events', JSON.stringify(this.state.events))
+                    this.state.events.filter(
+                        event => this.state.favoriteEventIds.includes(event.id)
+                    ).forEach( event => {
+                        console.log(event)
+                        console.log(moment(event.Date).format())
+                        console.log(moment().format())
+                        if (moment(event.Date).isSame(moment().format(), 'day'))  {
+                            console.log('Blah')
+                            NotificationManager.info('Jedno z wydarzeń, które dodałeś do ulubionych startuje dzisiaj');
+                        }
+                    })
                 })
             )
 
@@ -100,7 +111,6 @@ class Calendar extends React.Component {
         }, () => {
             localStorage.setItem('favoriteEventIds', JSON.stringify(this.state.favoriteEventIds))
         })
-
     }
 
     createNotification = (type) => {
@@ -114,29 +124,27 @@ class Calendar extends React.Component {
     };
 
 
-
     render() {
         console.log(this.props)
         return (
             <Grid>
                 <div>
-                    <div>
-                        <button className='btn btn-info'
-                                onClick={this.createNotification('info')}>Info
-                        </button>
-                        <NotificationContainer/>
-                    </div>
                     <Row className="show-grid">
                         <MyCalendar events={this.state.events} history={this.props.history}/>
-                    <h2>Calendar</h2>
-                        <Col sm={6} md={5}><Filter search={this.state.search}
-                            searchUpdate={this.searchUpdate}
-                            FilterUpdate={this.FilterUpdate}
-                            activeFilter={this.state.activeFilter}
-                                                   resetFilter={this.resetFilter}/></Col>
-                        <Col sm={6} md={7}>   <FavoriteEvents remove={this.removeFromFavs} events={this.state.events.filter(
-                            event => this.state.favoriteEventIds.includes(event.id)
-                        )} notification={this.createNotification('info')}/></Col>
+                        <h2>Calendar</h2>
+                        <Col sm={6} md={5}>
+                            <Filter search={this.state.search}
+                                    searchUpdate={this.searchUpdate}
+                                    FilterUpdate={this.FilterUpdate}
+                                    activeFilter={this.state.activeFilter}
+                                    resetFilter={this.resetFilter}/>
+                        </Col>
+                        <Col sm={6} md={7}>
+                            <FavoriteEvents remove={this.removeFromFavs}
+                                            events={this.state.events.filter(
+                                                event => this.state.favoriteEventIds.includes(event.id)
+                                            )}/>
+                        </Col>
                     </Row>
                     <div>
                         {
@@ -144,7 +152,7 @@ class Calendar extends React.Component {
                                 eventt => (
 
                                     this.state.activeFilter.map(
-                                        filaterName => filters[filaterName]
+                                        filterName => filters[filterName]
                                     ).every(
                                         func => func(eventt, this.state.search)
                                     )
@@ -158,32 +166,23 @@ class Calendar extends React.Component {
                                             <p>Lokalizacja:{eventt.Town}</p>
                                             <p>Kiedy:{eventt.Date}</p>
                                             <p>{eventt.Type}</p>
-                                            <p><LinkContainer to={'/calendar/' + eventt.id}><Button onClick="" bsStyle="primary">Więcej</Button></LinkContainer>
+                                            <p><LinkContainer to={'/calendar/' + eventt.id}><Button onClick=""
+                                                                                                    bsStyle="primary">Więcej</Button></LinkContainer>
                                             </p>
-                                            <p> <button onClick={() => {
-                                                this.setState({
-                                                    favoriteEventIds: this.state.favoriteEventIds.filter(
-                                                        id => id !== eventt.id
-                                                    ).concat(eventt.id)
-                                                }, () => {
-                                                    localStorage.setItem('favoriteEventIds', JSON.stringify(this.state.favoriteEventIds))
-                                                })
-                                            }}>+</button></p>
+                                            <p>
+                                                <button onClick={() => {
+                                                    this.setState({
+                                                        favoriteEventIds: this.state.favoriteEventIds.filter(
+                                                            id => id !== eventt.id
+                                                        ).concat(eventt.id)
+                                                    }, () => {
+                                                        localStorage.setItem('favoriteEventIds', JSON.stringify(this.state.favoriteEventIds))
+                                                    })
+                                                }}>+
+                                                </button>
+                                                <NotificationContainer/>
+                                            </p>
                                         </Thumbnail>
-
-
-                                        {/*<Thumbnail bsClass="event-thumbnail" src={process.env.PUBLIC_URL + '/img/events/' + event.image}*/}
-                                                   {/*alt="242x200">*/}
-                                            {/*<h3 className="cardheader">{event.name}</h3>*/}
-                                            {/*<p>Description</p>*/}
-                                            {/*<p>*/}
-                                                {/*<Button bsStyle="primary">{event.price} PLN</Button>&nbsp;*/}
-                                                {/*<Button bsStyle="default">{event.date}</Button>*/}
-                                            {/*</p>*/}
-                                        {/*</Thumbnail>*/}
-
-
-
                                     </Col>
 
                                 )
