@@ -129,6 +129,7 @@ class Calendar extends React.Component {
         return (
             <Grid>
                 <div>
+                    <NotificationContainer/>
                     <Row className="show-grid">
                         <MyCalendar events={this.state.events} history={this.props.history}/>
                         <h2>Calendar</h2>
@@ -180,7 +181,6 @@ class Calendar extends React.Component {
                                                     })
                                                 }}>+
                                                 </button>
-                                                <NotificationContainer/>
                                             </p>
                                         </Thumbnail>
                                     </Col>
