@@ -43,7 +43,10 @@ class Calendar extends React.Component {
             activeFilter: [],
             filterByType: false,
             favoriteEventIds: JSON.parse(localStorage.getItem('favoriteEventIds')) || [],
+            showReply: false
         }
+
+
 
         this.searchUpdate = event => this.setState({
                 search: event.target.value
@@ -103,6 +106,12 @@ class Calendar extends React.Component {
 
     }
 
+    onClick(e){
+        e.preventDefault();
+        this.setState({showReply: !this.state.showReply})
+    }
+
+
     removeFromFavs = eventId => {
         this.setState({
             favoriteEventIds: this.state.favoriteEventIds.filter(
@@ -141,10 +150,12 @@ class Calendar extends React.Component {
                                     resetFilter={this.resetFilter}/>
                         </Col>
                         <Col sm={6} md={7}>
-                            <FavoriteEvents remove={this.removeFromFavs}
-                                            events={this.state.events.filter(
-                                                event => this.state.favoriteEventIds.includes(event.id)
-                                            )}/>
+                            <a onClick={this.onClick.bind(this)} href='#'><button className="hamburger"></button></a>
+                                {this.state.showReply && <div><FavoriteEvents remove={this.removeFromFavs}
+                                                                         events={this.state.events.filter(
+                                                                             event => this.state.favoriteEventIds.includes(event.id)
+                                                                         )}/></div>}
+
                         </Col>
                     </Row>
                     <div>
