@@ -183,7 +183,7 @@ class Calendar extends React.Component {
                                                                                                     bsStyle="primary">Więcej</Button></LinkContainer>
                                             </p>
                                             <p>
-                                                <button onClick={() => {
+                                                <img onClick={() => {
                                                     this.setState({
                                                         favoriteEventIds: this.state.favoriteEventIds.filter(
                                                             id => id !== eventt.id
@@ -191,8 +191,8 @@ class Calendar extends React.Component {
                                                     }, () => {
                                                         localStorage.setItem('favoriteEventIds', JSON.stringify(this.state.favoriteEventIds))
                                                     })
-                                                }}>+
-                                                </button>
+                                                }} src={"/heart-add-512.png"}
+                                                className="icon"/>
                                             </p>
                                         </Thumbnail>
                                     </Col>
