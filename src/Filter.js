@@ -78,10 +78,11 @@ class Filter extends React.Component {
                 </FormGroup>
 
                 <div style={{padding: '10px 0'}}>
-                    <ButtonToolbar>
+                    <ul className="filters-buttons">
+                    <li className="left-button"><ButtonToolbar  className="filter-button">
                         <Dropdown id="dropdown-custom-2">
                             <Button bsStyle="info">
-                                {selectedCityFilter !== undefined ? selectedCityFilter.label : 'Wybierz Miasto'}
+                                {selectedCityFilter !== undefined ? selectedCityFilter.label : 'Wybierz Miasto'+ ''+''}
                             </Button>
                             <Dropdown.Toggle bsStyle="success"/>
                             <Dropdown.Menu className="super-colors">
@@ -99,9 +100,9 @@ class Filter extends React.Component {
                                 <MenuItem eventKey="4" onClick={() => resetFilter('city')}>Wszystko</MenuItem>
                             </Dropdown.Menu>
                         </Dropdown>
-                    </ButtonToolbar>
+                    </ButtonToolbar></li>
                     {' '}
-                    <ButtonToolbar>
+                    <li className="right-button"><ButtonToolbar  className="filter-button">
                         <Dropdown id="dropdown-custom-3">
                             <Button bsStyle="info">
                                 {selectedTypeFilter !== undefined ? selectedTypeFilter.label : 'Wybierz Kategorie'}
@@ -120,7 +121,8 @@ class Filter extends React.Component {
                                 <MenuItem eventKey="4" onClick={() => resetFilter('type')}>Wszystko</MenuItem>
                             </Dropdown.Menu>
                         </Dropdown>
-                    </ButtonToolbar>
+                    </ButtonToolbar></li>
+                    </ul>
                 </div>
 
 

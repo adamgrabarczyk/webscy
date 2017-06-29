@@ -22,3 +22,56 @@
     box-shadow: 0;
 
 }
+
+.filters-buttons li {
+display: inline-flex;
+    list-style-type: none;
+}
+
+.dropdown-menu > li > a {
+    padding: 4px 22px;
+}
+.favorite {
+    maxheight: 100
+
+}
+
+.favorite ul {
+    display: flex;
+flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+.favorite li {
+    /*display: flex;*/
+    /*flex-direction: column; */
+}
+
+.open > .dropdown-menu {
+    display: inline-grid;
+}
+
+.right-button {
+    padding-left: 30px;
+}
+
+.left-button {
+    margin-left: -38px;
+}
+
+.favorite-event {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+
+.favorite-event a:hover {
+    color: aqua;
+    text-decoration: none;
+}
+
+.form-control {
+width: 77%;
+    border-radius: 55px;
+}
