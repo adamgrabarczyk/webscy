@@ -1,8 +1,10 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
+
 const FavoriteEvents = props => (
-    <div style={{}} className="favorite">
+
+    <span className="favorite">
         <h2>Ulubione</h2>
 
         <ul>
@@ -18,7 +20,8 @@ const FavoriteEvents = props => (
             }
 
         </ul>
-    </div>
+    </span>
+
 );
 
 export default FavoriteEvents

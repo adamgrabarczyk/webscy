@@ -64,7 +64,7 @@
   },
   {
     "id": 8,
-    "Name": "Balet Jezioro Łabędzie",
+    "Name": "Balet Jezioro",
     "Town": "Gdańsk",
     "Date": "07-22-17",
     "Type": "Kultura",
@@ -73,7 +73,7 @@
   },
   {
     "id": 9,
-    "Name": "Asseco Gdynia vs Trefl Sopot",
+    "Name": "Asseco vs Trefl",
     "Town": "Gdynia",
     "Date": "07-13-17",
     "Type": "Sport",
@@ -91,7 +91,7 @@
   },
   {
     "id": 11,
-    "Name": "Dzień mamy pod chmurką",
+    "Name": "Dzień mamy",
     "Town": "Sopot",
     "Date": "07-14-17",
     "Type": "Koncert",
@@ -145,7 +145,7 @@
   },
   {
     "id": 17,
-    "Name": "Taniec Wspólczesny Pająk",
+    "Name": "Taniec Wspólczesny",
     "Town": "Gdynia",
     "Date": "07-25-17",
     "Type": "Kultura",
@@ -208,7 +208,7 @@
   },
   {
     "id": 24,
-    "Name": "Festiwal filmów dokumentalnych",
+    "Name": "Wiedźmin",
     "Town": "Gdynia",
     "Date": "07-23-17",
     "Type": "Kino",
@@ -235,7 +235,7 @@
   },
   {
     "id": 27,
-    "Name": "Trefl Sopot vs LA Lakers",
+    "Name": "Trefl vs LA Lakers",
     "Town": "Sopot",
     "Date": "07-31-17",
     "Type": "Sport",
@@ -253,7 +253,7 @@
   },
   {
     "id": 29,
-    "Name": "Festiwal Muzyki Rozrywkowej",
+    "Name": "Festiwal Muzyki",
     "Town": "Sopot",
     "Date": "08-30-17",
     "Type": "Koncert",
@@ -361,7 +361,7 @@
   },
   {
     "id": 41,
-    "Name": "Festiwal filmów animowanych",
+    "Name": "Filmy animowane",
     "Town": "Gdynia",
     "Date": "27-07-17",
     "Type": "Kino",
@@ -388,7 +388,7 @@
   },
   {
     "id": 44,
-    "Name": "Festiwal filmów sensacyjnych",
+    "Name": "Film sensacyjny",
     "Town": "Gdynia",
     "Date": "29-07-17",
     "Type": "Kino",
@@ -415,7 +415,7 @@
   },
   {
     "id": 47,
-    "Name": "Asseco Gdynia vs Miami Heat",
+    "Name": "Asseco vs Heat",
     "Town": "Gdynia",
     "Date": "30-05-17",
     "Type": "Sport",

@@ -32,7 +32,7 @@ display: inline-flex;
     padding: 4px 22px;
 }
 .favorite {
-    /*maxheight: 100*/
+
 
 }
 
@@ -104,11 +104,11 @@ width: 77%;
 
 .favsSection {
     height: 100%;
-    width: 0;
+    width: 28%;
     position: absolute;
     z-index: 1;
     top: 5px;
-    right: 10px;
+    right: -10px;
 
     transition: 0.5s;
     /*padding-top: 60px;*/
