@@ -28,7 +28,7 @@ class UsersList extends React.Component {
                     {
                         this.state.users.map(
                             user => (
-                                <li key={user.id}>{user.imie}</li>
+                                <li key={user.id}>{user.imie + ' ' + user.nazwisko}</li>
                             )
                         )
                     }
