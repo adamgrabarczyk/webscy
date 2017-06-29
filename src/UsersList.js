@@ -25,11 +25,26 @@ render() {
             const userId = parseInt(this.props.match.params.userId, 10)
             const user = this.state.userslist.find(
                 user => user.id === userId)
+    return (
+        <div>
+            <h1>
+
+                {' '}
+                {
+                    user ?
+                        user.imie :
+                        null
+                }
+            </h1>
+
+        </div>
+    )
+
         }
 
 
 
-    }
+
 
 }
 

@@ -72,6 +72,15 @@ export default class App extends React.Component {
                         </Navbar.Text>
                       </Navbar.Collapse>
                     </Nav>
+                      <Nav>
+                        <Navbar.Collapse>
+                            <Navbar.Text>
+                        <LinkContainer to="/UsersList">
+                            <Navbar.Link>user</Navbar.Link>
+                        </LinkContainer>
+                            </Navbar.Text>
+                        </Navbar.Collapse>
+                    </Nav>
                     <Nav pullRight>
                       <NavItem>{this.state.user.email}</NavItem>
                       <NavItem onClick={() => firebase.auth().signOut()}> (Wyloguj)</NavItem>
