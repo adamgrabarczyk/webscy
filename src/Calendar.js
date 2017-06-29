@@ -149,13 +149,14 @@ class Calendar extends React.Component {
                                     activeFilter={this.state.activeFilter}
                                     resetFilter={this.resetFilter}/>
                         </Col>
-                        <Col sm={6} md={7}>
+                        <Col sm={6} md={7} >
+                            <div className="favsSection">
                             <a onClick={this.onClick.bind(this)} href='#'><button className="hamburger"></button></a>
                                 {this.state.showReply && <div><FavoriteEvents remove={this.removeFromFavs}
                                                                          events={this.state.events.filter(
                                                                              event => this.state.favoriteEventIds.includes(event.id)
                                                                          )}/></div>}
-
+                            </div>
                         </Col>
                     </Row>
                     <div>
@@ -171,7 +172,7 @@ class Calendar extends React.Component {
                                 )
                             ).map(
                                 eventt => (
-                                    <Col xs={12} md={6}>
+                                    <Col xs={12} md={5}>
                                         <Thumbnail key={eventt.id}>
 
                                             <h2>{eventt.Name}</h2>

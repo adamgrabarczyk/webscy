@@ -32,14 +32,14 @@ display: inline-flex;
     padding: 4px 22px;
 }
 .favorite {
-    maxheight: 100
+    /*maxheight: 100*/
 
 }
 
 .favorite ul {
     display: flex;
 flex-direction: column;
-    flex-wrap: wrap;
+
 
 }
 
@@ -98,5 +98,19 @@ width: 77%;
 
 .hamburger::after {
     transform: translateY(25px);
+
+}
+
+
+.favsSection {
+    height: 100%;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    top: 5px;
+    right: 10px;
+
+    transition: 0.5s;
+    /*padding-top: 60px;*/
 
 }
