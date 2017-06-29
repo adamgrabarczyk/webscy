@@ -136,7 +136,7 @@
   },
   {
     "id": 16,
-    "Name": "Mecz Polska-Szwecja",
+    "Name": "Mecz Polska-Peru",
     "Town": "Gdańsk",
     "Date": "06-18-17",
     "Type": "Sport",
@@ -208,7 +208,7 @@
   },
   {
     "id": 24,
-    "Name": "Wiedźmin",
+    "Name": "Batman",
     "Town": "Gdynia",
     "Date": "07-23-17",
     "Type": "Kino",
@@ -217,7 +217,7 @@
   },
   {
     "id": 25,
-    "Name": "Mecz Polska-Chorwacja",
+    "Name": "Mecz Polska-USA",
     "Town": "Gdańsk",
     "Date": "08-03-17",
     "Type": "Sport",
@@ -307,7 +307,7 @@
   },
   {
     "id": 35,
-    "Name": "Festiwal Dobrej Muzyki",
+    "Name": "Festiwal Muzyki",
     "Town": "Sopot",
     "Date": "02-08-17",
     "Type": "Koncert",
@@ -433,7 +433,7 @@
   },
   {
     "id": 49,
-    "Name": "Festiwal muzyki operowej",
+    "Name": "Festiwal opery",
     "Town": "Gdańsk",
     "Date": "31-04-17",
     "Type": "Kultura",
