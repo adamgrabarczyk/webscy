@@ -7,8 +7,24 @@ class UsersList extends React.Component {
         super(props)
 
         this.state = {
-            userlist: []
+            userslist: []
         }
+
+        fetch(
+            process.env.PUBLIC_URL + '/userlist.json'
+        ).then(
+            response => response.json()
+        ).then(
+            userslist => this.setState({
+                userslist: userslist
+            })
+        )
+
+render() {
+
+
+        }
+
 
 
     }

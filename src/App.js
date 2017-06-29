@@ -12,6 +12,7 @@ import firebase from 'firebase'
 import Home from './Home'
 import Calendar from './Calendar'
 import Event from './Event'
+import UsersList from './UsersList'
 
 // Initialize Firebase
 const config = {
@@ -78,6 +79,7 @@ export default class App extends React.Component {
                   </Navbar>
                   <Route exact path="/calendar" component={Calendar}/>
                   <Route path="/calendar/:eventtId" component={Event}/>
+                  <Route path="/UsersList" component={UsersList}/>
                 </div>
             }
           </div>
