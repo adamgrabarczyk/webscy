@@ -43,7 +43,6 @@ class Calendar extends React.Component {
             activeFilter: [],
             filterByType: false,
             favoriteEventIds: JSON.parse(localStorage.getItem('favoriteEventIds')) || [],
-            userslist: []
         }
 
         this.searchUpdate = event => this.setState({

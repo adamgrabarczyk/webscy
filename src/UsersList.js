@@ -7,45 +7,35 @@ class UsersList extends React.Component {
         super(props)
 
         this.state = {
-            userslist: []
+            users: []
         }
 
         fetch(
-            process.env.PUBLIC_URL + '/userlist.json'
+            process.env.PUBLIC_URL + '/data/userlist.json'
         ).then(
             response => response.json()
-        ).then(
-            userslist => this.setState({
-                userslist: userslist
-            })
+        ).then(users => this.setState({
+            users: users
+        }))
+    }
+
+    render() {
+        return (
+            <div>
+                <h3>Lista zalogowanych użytowników</h3>
+
+                <ul>
+                    {
+                        this.state.users.map(
+                            user => (
+                                <li key={user.id}>{user.imie}</li>
+                            )
+                        )
+                    }
+                </ul>
+            </div>
         )
     }
-render() {
-
-            const userId = parseInt(this.props.match.params.userId, 10)
-            const user = this.state.userslist.find(
-                user => user.id === userId)
-    return (
-        <div>
-            <h1>
-
-                {' '}
-                {
-                    user ?
-                        user.imie :
-                        null
-                }
-            </h1>
-
-        </div>
-    )
-
-        }
-
-
-
-
-
 }
 
 export default UsersList
