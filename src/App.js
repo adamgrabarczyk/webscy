@@ -76,7 +76,7 @@ export default class App extends React.Component {
                         <Navbar.Collapse>
                             <Navbar.Text>
                         <LinkContainer to="/UsersList">
-                            <Navbar.Link>user</Navbar.Link>
+                            <Navbar.Link></Navbar.Link>
                         </LinkContainer>
                             </Navbar.Text>
                         </Navbar.Collapse>
