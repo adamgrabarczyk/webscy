@@ -24,7 +24,7 @@ import React from 'react'
       render() {
                 console.log(this.props.match, this.state)
 
-                const eventtId = parseInt(this.props.match.params.eventtId, 10)
+                    const eventtId = parseInt(this.props.match.params.eventtId, 10)
                     const eventt = this.state.events.find(
                       eventt => eventt.id === eventtId
                 )

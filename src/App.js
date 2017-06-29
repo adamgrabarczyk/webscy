@@ -12,6 +12,7 @@ import firebase from 'firebase'
 import Home from './Home'
 import Calendar from './Calendar'
 import Event from './Event'
+import UsersList from './UsersList'
 
 // Initialize Firebase
 const config = {
@@ -71,6 +72,15 @@ export default class App extends React.Component {
                         </Navbar.Text>
                       </Navbar.Collapse>
                     </Nav>
+                      <Nav>
+                        <Navbar.Collapse>
+                            <Navbar.Text>
+                        <LinkContainer to="/UsersList">
+                            <Navbar.Link></Navbar.Link>
+                        </LinkContainer>
+                            </Navbar.Text>
+                        </Navbar.Collapse>
+                    </Nav>
                     <Nav pullRight>
                       <NavItem>{this.state.user.email}</NavItem>
                       <NavItem onClick={() => firebase.auth().signOut()}> (Wyloguj)</NavItem>
@@ -78,6 +88,7 @@ export default class App extends React.Component {
                   </Navbar>
                   <Route exact path="/calendar" component={Calendar}/>
                   <Route path="/calendar/:eventtId" component={Event}/>
+                  <Route path="/UsersList" component={UsersList}/>
                 </div>
             }
           </div>
