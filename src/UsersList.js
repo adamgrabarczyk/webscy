@@ -19,10 +19,12 @@ class UsersList extends React.Component {
                 userslist: userslist
             })
         )
-
+    }
 render() {
 
-
+            const userId = parseInt(this.props.match.params.userId, 10)
+            const user = this.state.userslist.find(
+                user => user.id === userId)
         }
 
 
