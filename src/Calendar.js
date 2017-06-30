@@ -93,8 +93,7 @@ class Calendar extends React.Component {
                         console.log(moment(event.Date).format())
                         console.log(moment().format())
                         if (moment(event.Date).isSame(moment().format(), 'day'))  {
-                            console.log('Blah')
-                            NotificationManager.info('Jedno z wydarzeń, które dodałeś do ulubionych startuje dzisiaj');
+                            NotificationManager.info("'"+ event.Name +"'" + " " + "startuje już dzsiaj! Musisz tam być!");
                         }
                     })
                 })
@@ -127,6 +126,9 @@ class Calendar extends React.Component {
             switch (type) {
                 case 'info':
                     NotificationManager.info('Jedno z wydarzeń, które dodałeś do ulubionych startuje dzisiaj');
+                    break;
+                case 'success':
+                    NotificationManager.success('Success message', 'Title here');
                     break;
             }
         };
@@ -191,7 +193,7 @@ class Calendar extends React.Component {
                                                     }, () => {
                                                         localStorage.setItem('favoriteEventIds', JSON.stringify(this.state.favoriteEventIds))
                                                     })
-                                                }} src={"/heart-add-512.png"}
+                                                } } src={"/heart-add-512.png"}
                                                 className="icon"/>
                                             </p>
                                             <div className="thumbnail-image"
