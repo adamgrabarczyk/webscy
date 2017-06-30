@@ -7,7 +7,7 @@
     "Type": "Koncert",
     "Price": 100,
     "Place": "Plac Zebrań Ludowych",
-    "image": "ergo.jpg"
+    "image": "https://github.com/infoshareacademy/jfdz4-WEBscy-app/blob/FZ4W-36-calendar/public/ergo.jpg?raw=true"
     },
   {
     "id": 2,
@@ -34,7 +34,8 @@
     "Date": "07-08-17",
     "Type": "Sport",
     "Price": 250,
-    "Place": "Ergo Arena"
+    "Place": "Ergo Arena",
+    "image": "https://github.com/infoshareacademy/jfdz4-WEBscy-app/blob/FZ4W-36-calendar/public/ergo.jpg?raw=true"
   },
   {
     "id": 5,
@@ -106,7 +107,8 @@
     "Date": "07-07-17",
     "Type": "Koncert",
     "Price": 180,
-    "Place": "Ergo Arena"
+    "Place": "Ergo Arena",
+    "image": "https://github.com/infoshareacademy/jfdz4-WEBscy-app/blob/FZ4W-36-calendar/public/ergo.jpg?raw=true"
   },
   {
     "id": 13,
@@ -196,7 +198,8 @@
     "Date": "08-10-17",
     "Type": "Sport",
     "Price": 250,
-    "Place": "Ergo Arena"
+    "Place": "Ergo Arena",
+    "image": "https://github.com/infoshareacademy/jfdz4-WEBscy-app/blob/FZ4W-36-calendar/public/ergo.jpg?raw=true"
   },
   {
     "id": 23,
@@ -241,7 +244,8 @@
     "Date": "07-31-17",
     "Type": "Sport",
     "Price": 50,
-    "Place": "Ergo Arena"
+    "Place": "Ergo Arena",
+    "image": "https://github.com/infoshareacademy/jfdz4-WEBscy-app/blob/FZ4W-36-calendar/public/ergo.jpg?raw=true"
   },
   {
     "id": 28,
@@ -376,7 +380,8 @@
     "Date": "27-09-17",
     "Type": "Sport",
     "Price": 250,
-    "Place": "Ergo Arena"
+    "Place": "Ergo Arena",
+    "image": "https://github.com/infoshareacademy/jfdz4-WEBscy-app/blob/FZ4W-36-calendar/public/ergo.jpg?raw=true"
   },
   {
     "id": 43,

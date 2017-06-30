@@ -164,3 +164,11 @@ input::-webkit-input-placeholder {
     transition: 0.3s transform linear;
     cursor: pointer;
 }
+
+.img {
+    max-width: 250px;
+}
+
+.thumbnail-image {
+    float: right;
+}

@@ -187,6 +187,9 @@ class Calendar extends React.Component {
                                             <h2>{eventt.Name}</h2>
                                             <p>Lokalizacja: {eventt.Town}</p>
                                             <p>Kiedy: {eventt.Date}</p>
+                                            <p className="thumbnail-image">
+                                                <img src={eventt.image} alt="" className="img"/>
+                                            </p>
                                             <p>{eventt.Type}</p>
                                             <p><LinkContainer to={'/calendar/' + eventt.id}><Button onClick=""
                                                                                                     bsStyle="primary">Więcej</Button></LinkContainer>
@@ -203,8 +206,7 @@ class Calendar extends React.Component {
                                                 } } src={"/heart-add-512.png"}
                                                 className="icon"/>
                                             </p>
-                                            <div className="thumbnail-image"
-                                                 style={{backgroundImage: "url(" + process.env.PUBLIC_URL + 'public/' + eventt.image + ")"}}></div>
+
                                         </Thumbnail>
                                     </Col>
 
