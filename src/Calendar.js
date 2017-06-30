@@ -185,7 +185,7 @@ class Calendar extends React.Component {
                                                                                                     bsStyle="primary">Więcej</Button></LinkContainer>
                                             </p>
                                             <p>
-                                                <img onClick={() => {
+                                                <img onClick={() => {NotificationManager.success('Dodano do ulubionych', 'Wydarzenie:' + ' ' + eventt.Name);
                                                     this.setState({
                                                         favoriteEventIds: this.state.favoriteEventIds.filter(
                                                             id => id !== eventt.id
