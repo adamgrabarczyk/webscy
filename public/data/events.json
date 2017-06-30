@@ -6,7 +6,8 @@
     "Date": "07-17-17",
     "Type": "Koncert",
     "Price": 100,
-    "Place": "Plac Zebrań Ludowych"
+    "Place": "Plac Zebrań Ludowych",
+    "image": "ergo.jpg"
     },
   {
     "id": 2,

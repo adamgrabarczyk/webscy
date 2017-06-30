@@ -194,6 +194,8 @@ class Calendar extends React.Component {
                                                 }} src={"/heart-add-512.png"}
                                                 className="icon"/>
                                             </p>
+                                            <div className="thumbnail-image"
+                                                 style={{backgroundImage: "url(" + process.env.PUBLIC_URL + '/' + eventt.image + ")"}}></div>
                                         </Thumbnail>
                                     </Col>
 
