@@ -3,6 +3,7 @@ import {Col, Grid, Table, Thumbnail, Button, Row} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 import {NotificationContainer, NotificationManager} from 'react-notifications';
 import moment from 'moment';
+import Burger from 'react-burger-king';
 
 import Filter from './Filter'
 import  {LinkContainer} from 'react-router-bootstrap'
@@ -151,9 +152,15 @@ class Calendar extends React.Component {
                                     activeFilter={this.state.activeFilter}
                                     resetFilter={this.resetFilter}/>
                         </Col>
+                        <div></div>
                         <Col sm={6} md={8} >
                             <div className="favsSection">
-                            <a onClick={this.onClick.bind(this)} href='#'><button className="hamburger"></button></a>
+                            <a onClick={this.onClick.bind(this)} href='#'><Burger
+                                onClick={console.log(10)}
+                                size={36}
+                                    isActive={false}
+                                type="arrow"
+                            /></a>
                                 {this.state.showReply && <div><FavoriteEvents remove={this.removeFromFavs}
                                                                          events={this.state.events.filter(
                                                                              event => this.state.favoriteEventIds.includes(event.id)
@@ -178,8 +185,8 @@ class Calendar extends React.Component {
                                         <Thumbnail key={eventt.id}>
 
                                             <h2>{eventt.Name}</h2>
-                                            <p>Lokalizacja:{eventt.Town}</p>
-                                            <p>Kiedy:{eventt.Date}</p>
+                                            <p>Lokalizacja: {eventt.Town}</p>
+                                            <p>Kiedy: {eventt.Date}</p>
                                             <p>{eventt.Type}</p>
                                             <p><LinkContainer to={'/calendar/' + eventt.id}><Button onClick=""
                                                                                                     bsStyle="primary">Więcej</Button></LinkContainer>
@@ -197,7 +204,7 @@ class Calendar extends React.Component {
                                                 className="icon"/>
                                             </p>
                                             <div className="thumbnail-image"
-                                                 style={{backgroundImage: "url(" + process.env.PUBLIC_URL + '/' + eventt.image + ")"}}></div>
+                                                 style={{backgroundImage: "url(" + process.env.PUBLIC_URL + 'public/' + eventt.image + ")"}}></div>
                                         </Thumbnail>
                                     </Col>
 

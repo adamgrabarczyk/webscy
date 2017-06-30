@@ -69,11 +69,12 @@ class Filter extends React.Component {
         return (
             <form>
                 <FormGroup>
-                    <FormControl
-                        type="text"
+                    <input
+                        type="search"
                         value={search}
                         placeholder="Czego szukasz?"
                         onChange={searchUpdate}
+                        clasName="input"
                     />
                 </FormGroup>
 
