@@ -164,9 +164,27 @@ input::-webkit-input-placeholder {
     transition: 0.3s transform linear;
     cursor: pointer;
 }
-
+/**/
 .img {
     max-width: 250px;
+    margin: 10px 0;
+    height: 120px;
+    text-align: center;
+    background: white;
+    padding: 10px;
+    opacity: 0.8;
+    border-radius: 5px;
+    /*border: 0.2px solid silver;*/
+    /*box-sizing: border-box;*/
+    /*display: flex;*/
+    /*justify-content: space-around;*/
+    /*flex-wrap: wrap;*/
+}
+
+.img:hover{
+    opacity: 1;
+    transition: 0.3s all linear;
+    transform: scale(1.1);
 }
 
 .thumbnail-image {
