@@ -3,6 +3,7 @@ import {Col, Grid, Table, Thumbnail, Button, Row} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 import {NotificationContainer, NotificationManager} from 'react-notifications';
 import moment from 'moment';
+import Burger from 'react-burger-king';
 
 import Filter from './Filter'
 import  {LinkContainer} from 'react-router-bootstrap'
@@ -43,7 +44,10 @@ class Calendar extends React.Component {
             activeFilter: [],
             filterByType: false,
             favoriteEventIds: JSON.parse(localStorage.getItem('favoriteEventIds')) || [],
+            showReply: false
         }
+
+
 
         this.searchUpdate = event => this.setState({
                 search: event.target.value
@@ -90,8 +94,7 @@ class Calendar extends React.Component {
                         console.log(moment(event.Date).format())
                         console.log(moment().format())
                         if (moment(event.Date).isSame(moment().format(), 'day'))  {
-                            console.log('Blah')
-                            NotificationManager.info('Jedno z wydarzeń, które dodałeś do ulubionych startuje dzisiaj');
+                            NotificationManager.info("Wydarzenie:" + " " + "'"+ event.Name +"'" + " " + "startuje już dzsiaj! Musisz tam być!");
                         }
                     })
                 })
@@ -102,6 +105,12 @@ class Calendar extends React.Component {
 
 
     }
+
+    onClick(e){
+        e.preventDefault();
+        this.setState({showReply: !this.state.showReply})
+    }
+
 
     removeFromFavs = eventId => {
         this.setState({
@@ -119,6 +128,9 @@ class Calendar extends React.Component {
                 case 'info':
                     NotificationManager.info('Jedno z wydarzeń, które dodałeś do ulubionych startuje dzisiaj');
                     break;
+                case 'success':
+                    NotificationManager.success('Success message', 'Title here');
+                    break;
             }
         };
     };
@@ -133,18 +145,27 @@ class Calendar extends React.Component {
                     <Row className="show-grid">
                         <MyCalendar events={this.state.events} history={this.props.history}/>
                         <h2>Calendar</h2>
-                        <Col sm={6} md={5}>
+                        <Col sm={6} md={4}>
                             <Filter search={this.state.search}
                                     searchUpdate={this.searchUpdate}
                                     FilterUpdate={this.FilterUpdate}
                                     activeFilter={this.state.activeFilter}
                                     resetFilter={this.resetFilter}/>
                         </Col>
-                        <Col sm={6} md={7}>
-                            <FavoriteEvents remove={this.removeFromFavs}
-                                            events={this.state.events.filter(
-                                                event => this.state.favoriteEventIds.includes(event.id)
-                                            )}/>
+                        <div></div>
+                        <Col sm={6} md={8} >
+                            <div className="favsSection">
+                            <a onClick={this.onClick.bind(this)} href='#'><Burger
+                                onClick={console.log(10)}
+                                size={36}
+                                    isActive={false}
+                                type="arrow"
+                            /></a>
+                                {this.state.showReply && <div><FavoriteEvents remove={this.removeFromFavs}
+                                                                         events={this.state.events.filter(
+                                                                             event => this.state.favoriteEventIds.includes(event.id)
+                                                                         )}/></div>}
+                            </div>
                         </Col>
                     </Row>
                     <div>
@@ -160,18 +181,21 @@ class Calendar extends React.Component {
                                 )
                             ).map(
                                 eventt => (
-                                    <Col xs={12} md={6}>
+                                    <Col xs={12} md={5}>
                                         <Thumbnail key={eventt.id}>
 
                                             <h2>{eventt.Name}</h2>
-                                            <p>Lokalizacja:{eventt.Town}</p>
-                                            <p>Kiedy:{eventt.Date}</p>
+                                            <p>Lokalizacja: {eventt.Town}</p>
+                                            <p>Kiedy: {eventt.Date}</p>
+                                            <p className="thumbnail-image">
+                                                <img src={eventt.image} alt="" className="img"/>
+                                            </p>
                                             <p>{eventt.Type}</p>
                                             <p><LinkContainer to={'/calendar/' + eventt.id}><Button onClick=""
                                                                                                     bsStyle="primary">Więcej</Button></LinkContainer>
                                             </p>
                                             <p>
-                                                <button onClick={() => {
+                                                <img onClick={() => {NotificationManager.success('Dodano do ulubionych', 'Wydarzenie:' + ' ' + eventt.Name);
                                                     this.setState({
                                                         favoriteEventIds: this.state.favoriteEventIds.filter(
                                                             id => id !== eventt.id
@@ -179,9 +203,10 @@ class Calendar extends React.Component {
                                                     }, () => {
                                                         localStorage.setItem('favoriteEventIds', JSON.stringify(this.state.favoriteEventIds))
                                                     })
-                                                }}>+
-                                                </button>
+                                                } } src={"/heart-add-512.png"}
+                                                className="icon"/>
                                             </p>
+
                                         </Thumbnail>
                                     </Col>
 

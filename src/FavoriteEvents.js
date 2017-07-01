@@ -2,7 +2,8 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 const FavoriteEvents = props => (
-    <div style={{height: 350}}>
+
+    <span className="favorite">
         <h2>Ulubione</h2>
 
         <ul>
@@ -13,12 +14,17 @@ const FavoriteEvents = props => (
                         name: event.Name
                     })
                 ).map(
-                    event => <li><Link to={'/calendar/' + event.id}>{event.name}</Link><button onClick={() => props.remove(event.id)}>-</button> </li>
+                    event => <li className="favorite-event"><img onClick={() => props.remove(event.id)}
+                                                                  src={"/Icon-remove.ico"}
+                                                                  className="remove-btn"/>
+                        <Link to={'/calendar/' + event.id}>{" " +event.name}</Link>
+                       </li>
                 )
             }
 
         </ul>
-    </div>
+    </span>
+
 );
 
 export default FavoriteEvents
