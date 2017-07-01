@@ -59,7 +59,7 @@ export default class App extends React.Component {
                   <Navbar>
                     <Navbar.Header>
                       <Navbar.Brand>
-                        <a href="#">GdańskEvents</a>
+                        <a href="#"><img src="/logo.svg" alt="" className="nav-logo"/></a>
                       </Navbar.Brand>
                       <Navbar.Toggle />
                     </Navbar.Header>
@@ -67,7 +67,7 @@ export default class App extends React.Component {
                       <Navbar.Collapse>
                         <Navbar.Text>
                           <LinkContainer to="/calendar">
-                            <Navbar.Link>Kalendarz</Navbar.Link>
+                            <Navbar.Link><p>Kalendarz</p></Navbar.Link>
                           </LinkContainer>
                         </Navbar.Text>
                       </Navbar.Collapse>

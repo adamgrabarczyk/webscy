@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 const FavoriteEvents = props => (
 
     <span className="favorite">
-        <h2>Ulubione</h2>
+        <h2 className="favs-tittle">Ulubione</h2>
 
         <ul>
             {

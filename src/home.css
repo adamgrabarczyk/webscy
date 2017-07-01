@@ -32,7 +32,9 @@ display: inline-flex;
     padding: 4px 22px;
 }
 .favorite {
-
+    color: #1b71a0;
+    text-shadow: 2px 2px 15px black;
+    font-family: cursive;
 
 }
 
@@ -67,7 +69,7 @@ flex-direction: column;
 
 
 .favorite-event a:hover {
-    color: aqua;
+    color: darkturquoise;
     text-decoration: none;
 }
 
@@ -208,8 +210,8 @@ body {
 
 .notice {
     font-family: cursive;
-    color: #1b71a0;
     font-size: large;
+    color: #1b71a0;
     text-shadow: 2px 2px 15px black;
 }
 
@@ -245,3 +247,60 @@ body {
     background-color: #398439;
 }
 
+
+.local-img {
+    max-width: 20px;
+}
+
+.navi {
+    color: #4ea3f4;
+}
+
+.navbar-default {
+    /*background-color:#4ea3f4;*/
+    background-image: none;
+    /*background-repeat: no-repeat;*/
+    background: linear-gradient(to bottom,#3995e9, white 100%);
+}
+
+.nav-logo {
+    max-width: 80px;
+}
+
+.navbar-default .navbar-link p {
+    color: white;
+    /*color: #1b71a0;*/
+    text-shadow: 2px 2px 15px black;
+    text-decoration: none;
+    width: 40px;
+    height: 20px;
+    margin: 5px;
+    transition: 0.3s transform linear;
+}
+
+.navbar-default .navbar-link p:hover {
+text-decoration: none;
+    transform: scale(1.2);
+    transition: 0.3s transform linear;
+    cursor: pointer;
+}
+
+
+
+.navbar-default .navbar-nav > li > a{
+    color: white;
+    /*color: #1b71a0;*/
+    text-shadow: 2px 2px 15px black;
+    text-decoration: none;
+    width: 120px;
+    height: 20px;
+    /*margin: 5px;*/
+    transition: 0.3s transform linear;
+}
+
+.navbar-default .navbar-nav > li > a:hover{
+    text-decoration: none;
+    transform: scale(1.2);
+    transition: 0.3s transform linear;
+    cursor: pointer;
+}

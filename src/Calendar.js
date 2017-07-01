@@ -190,8 +190,8 @@ class Calendar extends React.Component {
                                         <Thumbnail key={eventt.id}>
 
                                             <h2>{eventt.Name}</h2>
-                                            <p>Lokalizacja: {eventt.Town}</p>
-                                            <p>Kiedy: {eventt.Date}</p>
+                                            <p><img src="/localization.png" alt="" className="local-img"/> {eventt.Town}</p>
+                                            <p><img src="/calendar.png" alt="" className="local-img"/> {eventt.Date}</p>
                                             <p className="thumbnail-image">
                                                 <img src={eventt.image} alt="" className="img"/>
                                             </p>
