@@ -131,9 +131,7 @@ input::-webkit-input-placeholder {
     z-index: 1;
     top: 5px;
     right: -10px;
-
     transition: 0.5s;
-    /*padding-top: 60px;*/
 
 
 }
@@ -174,11 +172,6 @@ input::-webkit-input-placeholder {
     padding: 10px;
     opacity: 0.8;
     border-radius: 5px;
-    /*border: 0.2px solid silver;*/
-    /*box-sizing: border-box;*/
-    /*display: flex;*/
-    /*justify-content: space-around;*/
-    /*flex-wrap: wrap;*/
 }
 
 .img:hover{
@@ -194,3 +187,61 @@ input::-webkit-input-placeholder {
 .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
     min-width: 130px;
 }
+
+.calendar-setcion {
+    background-image: url("https://images2.alphacoders.com/437/437450.jpg");
+border-radius: 5px;
+}
+
+.rbc-toolbar button {
+    color: lightslategray;
+    margin-top: 10px;
+}
+
+.rbc-event {
+    background-color: #449d44;
+}
+
+body {
+    /*background-color: #99caf7;*/
+}
+
+.notice {
+    font-family: cursive;
+    color: #1b71a0;
+    font-size: large;
+    text-shadow: 2px 2px 15px black;
+}
+
+.find {
+    font-family: cursive;
+    color: #1b71a0;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    text-shadow: 2px 2px 15px black;
+}
+
+.thumbnail .caption {
+
+    background-image: url("https://www.planwallpaper.com/static/images/Alien_Ink_2560X1600_Abstract_Background_1.jpg");
+
+}
+
+.thumbnail h2 {
+    color: white;
+}
+
+.thumbnail p {
+    color: white;
+}
+
+.btn-primary {
+    background-image: linear-gradient(to bottom, #398439 0%, #3e8f3e 100%);
+    background-color: #398439;
+
+}
+
+.btn-primary:hover {
+    background-color: #398439;
+}
+
