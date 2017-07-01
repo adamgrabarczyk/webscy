@@ -143,7 +143,7 @@ class Calendar extends React.Component {
                 <div>
                     <NotificationContainer/>
                     <Row className="show-grid">
-                        <MyCalendar events={this.state.events} history={this.props.history}/>
+                        <div className="calendar-setcion"><MyCalendar events={this.state.events} history={this.props.history}/></div>
                         <h2>Calendar</h2>
                         <Col sm={6} md={4}>
                             <Filter search={this.state.search}
@@ -152,7 +152,6 @@ class Calendar extends React.Component {
                                     activeFilter={this.state.activeFilter}
                                     resetFilter={this.resetFilter}/>
                         </Col>
-                        <div></div>
                         <Col sm={6} md={8} >
                             <div className="favsSection">
                             <a onClick={this.onClick.bind(this)} href='#'><Burger

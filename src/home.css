@@ -190,3 +190,7 @@ input::-webkit-input-placeholder {
 .thumbnail-image {
     float: right;
 }
+
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    min-width: 130px;
+}
