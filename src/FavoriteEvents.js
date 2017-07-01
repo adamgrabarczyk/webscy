@@ -14,11 +14,11 @@ const FavoriteEvents = props => (
                         name: event.Name
                     })
                 ).map(
-                    event => <li className="favorite-event">
-                        <Link to={'/calendar/' + event.id}><img onClick={() => props.remove(event.id)}
-                                                                src={"/Icon-remove.ico"}
-                                                                className="remove-btn"/>{event.name}</Link>
-                        </li>
+                    event => <li className="favorite-event"><img onClick={() => props.remove(event.id)}
+                                                                  src={"/Icon-remove.ico"}
+                                                                  className="remove-btn"/>
+                        <Link to={'/calendar/' + event.id}>{" " +event.name}</Link>
+                       </li>
                 )
             }
 

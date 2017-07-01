@@ -94,7 +94,7 @@ class Calendar extends React.Component {
                         console.log(moment(event.Date).format())
                         console.log(moment().format())
                         if (moment(event.Date).isSame(moment().format(), 'day'))  {
-                            NotificationManager.info("'"+ event.Name +"'" + " " + "startuje już dzsiaj! Musisz tam być!");
+                            NotificationManager.info("Wydarzenie:" + " " + "'"+ event.Name +"'" + " " + "startuje już dzsiaj! Musisz tam być!");
                         }
                     })
                 })
