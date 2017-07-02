@@ -18,10 +18,6 @@
 }
 
 
-.notification notification-info {
-    box-shadow: 0;
-
-}
 
 .filters-buttons li {
 display: inline-flex;
@@ -166,12 +162,11 @@ input::-webkit-input-placeholder {
 }
 /**/
 .img {
-    max-width: 250px;
+    width: 250px;
     margin: 10px 0;
     height: 120px;
     text-align: center;
     background: white;
-    padding: 10px;
     opacity: 0.8;
     border-radius: 5px;
 }

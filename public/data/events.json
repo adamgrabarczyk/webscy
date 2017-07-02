@@ -26,7 +26,9 @@
     "Date": "07-02-17",
     "Type": "Kino",
     "Price": 0,
-    "Place": "Plaża Sopot"
+    "Place": "Plaża Sopot",
+    "image": "https://github.com/infoshareacademy/jfdz4-WEBscy-app/blob/develop/public/data/images/plazasopot.jpg?raw=true"
+
   },
   {
     "id": 4,
@@ -45,7 +47,8 @@
     "Date": "07-30-17",
     "Type": "Kultura",
     "Price": 35,
-    "Place": "Teatr Muzyczny"
+    "Place": "Teatr Muzyczny",
+    "image": "https://github.com/infoshareacademy/jfdz4-WEBscy-app/blob/develop/public/data/images/teatr-muzyczny-im_-danuty-baduszkowej-small.jpg?raw=true"
   },
   {
     "id": 6,
@@ -64,7 +67,8 @@
     "Date": "07-21-17",
     "Type": "Sport",
     "Price": 330,
-    "Place": "Stadion AMBER EXPO"
+    "Place": "Stadion AMBER EXPO",
+    "image": "https://github.com/infoshareacademy/jfdz4-WEBscy-app/blob/develop/public/data/images/stadionzdjecie_.jpg?raw=true"
   },
   {
     "id": 8,
@@ -73,7 +77,8 @@
     "Date": "07-22-17",
     "Type": "Kultura",
     "Price": 15,
-    "Place": "Opera Bałtycka"
+    "Place": "Opera Bałtycka",
+    "image": "https://github.com/infoshareacademy/jfdz4-WEBscy-app/blob/develop/public/data/images/opera.jpg?raw=true"
   },
   {
     "id": 9,
@@ -122,7 +127,8 @@
     "Date": "30-10-17",
     "Type": "Clubbing",
     "Price": 10,
-    "Place": "Parlament"
+    "Place": "Parlament",
+    "image": "https://github.com/infoshareacademy/jfdz4-WEBscy-app/blob/develop/public/data/images/parlament019.jpg?raw=true"
   },
   {
     "id": 14,
@@ -141,7 +147,8 @@
     "Date": "06-17-17",
     "Type": "Kultura",
     "Price": 24,
-    "Place": "Teatr miniatura"
+    "Place": "Teatr miniatura",
+    "image": "https://github.com/infoshareacademy/jfdz4-WEBscy-app/blob/develop/public/data/images/miniatura.jpg?raw=true"
   },
   {
     "id": 16,
@@ -150,7 +157,8 @@
     "Date": "06-18-17",
     "Type": "Sport",
     "Price": 350,
-    "Place": "Stadion AMBER EXPO"
+    "Place": "Stadion AMBER EXPO",
+    "image": "https://github.com/infoshareacademy/jfdz4-WEBscy-app/blob/develop/public/data/images/stadionzdjecie_.jpg?raw=true"
   },
   {
     "id": 17,
@@ -159,7 +167,8 @@
     "Date": "07-25-17",
     "Type": "Kultura",
     "Price": 15,
-    "Place": "Teatr Muzyczny"
+    "Place": "Teatr Muzyczny",
+    "image": "https://github.com/infoshareacademy/jfdz4-WEBscy-app/blob/develop/public/data/images/teatr-muzyczny-im_-danuty-baduszkowej-small.jpg?raw=true"
   },
   {
     "id": 18,
@@ -188,7 +197,8 @@
     "Date": "10-10-17",
     "Type": "Kino",
     "Price": 30,
-    "Place": "Multikino"
+    "Place": "Multikino",
+    "image": "https://github.com/infoshareacademy/jfdz4-WEBscy-app/blob/develop/public/data/images/multikino_sopot.jpg?raw=true"
   },
   {
     "id": 21,
@@ -197,7 +207,8 @@
     "Date": "07-05-17",
     "Type": "Kino",
     "Price": 35,
-    "Place": "Multikino"
+    "Place": "Multikino",
+    "image": "https://github.com/infoshareacademy/jfdz4-WEBscy-app/blob/develop/public/data/images/multikino_sopot.jpg?raw=true"
   },
   {
     "id": 22,
@@ -216,7 +227,8 @@
     "Date": "10-08-17",
     "Type": "Kultura",
     "Price": 35,
-    "Place": "Teatr Muzyczny"
+    "Place": "Teatr Muzyczny",
+    "image": "https://github.com/infoshareacademy/jfdz4-WEBscy-app/blob/develop/public/data/images/teatr-muzyczny-im_-danuty-baduszkowej-small.jpg?raw=true"
   },
   {
     "id": 24,
@@ -235,7 +247,8 @@
     "Date": "08-03-17",
     "Type": "Sport",
     "Price": 330,
-    "Place": "Stadion AMBER EXPO"
+    "Place": "Stadion AMBER EXPO",
+    "image": "https://github.com/infoshareacademy/jfdz4-WEBscy-app/blob/develop/public/data/images/stadionzdjecie_.jpg?raw=true"
   },
   {
     "id": 26,
@@ -244,7 +257,8 @@
     "Date": "06-29-17",
     "Type": "Kultura",
     "Price": 15,
-    "Place": "Opera Bałtycka"
+    "Place": "Opera Bałtycka",
+    "image": "https://github.com/infoshareacademy/jfdz4-WEBscy-app/blob/develop/public/data/images/opera.jpg?raw=true"
   },
   {
     "id": 27,
@@ -263,7 +277,8 @@
     "Date": "06-30-17",
     "Type": "Clubbing",
     "Price": 0,
-    "Place": "Zimne Nóżki"
+    "Place": "Zimne Nóżki",
+    "image": "https://github.com/infoshareacademy/jfdz4-WEBscy-app/blob/develop/public/data/images/zimne.jpg?raw=true"
   },
   {
     "id": 29,
@@ -312,7 +327,8 @@
     "Date": "10-17-17",
     "Type": "Koncert",
     "Price": 10,
-    "Place": "Skwer Kościuszki"
+    "Place": "Skwer Kościuszki",
+    "image": "https://github.com/infoshareacademy/jfdz4-WEBscy-app/blob/develop/public/data/images/skwer.jpg?raw=true"
   },
   {
     "id": 34,
@@ -331,7 +347,8 @@
     "Date": "02-08-17",
     "Type": "Koncert",
     "Price": 34,
-    "Place": "Monte Cassino"
+    "Place": "Monte Cassino",
+    "image": "https://github.com/infoshareacademy/jfdz4-WEBscy-app/blob/develop/public/data/images/skwer.jpg?raw=true"
   },
   {
     "id": 36,
@@ -340,7 +357,8 @@
     "Date": "03-12-17",
     "Type": "Kultura",
     "Price": 10,
-    "Place": "Opera Bałtyka"
+    "Place": "Opera Bałtyka",
+    "image": "https://github.com/infoshareacademy/jfdz4-WEBscy-app/blob/develop/public/data/images/plazasopot.jpg?raw=true"
   },
   {
     "id": 37,
@@ -349,7 +367,8 @@
     "Date": "19-11-17",
     "Type": "Sport",
     "Price": 0,
-    "Place": "Amber Expo"
+    "Place": "Amber Expo",
+    "image": "https://github.com/infoshareacademy/jfdz4-WEBscy-app/blob/develop/public/data/images/stadionzdjecie_.jpg?raw=true"
   },
   {
     "id": 38,
@@ -358,7 +377,8 @@
     "Date": "30-12-17",
     "Type": "Clubbing",
     "Price": 50,
-    "Place": "Spatiff"
+    "Place": "Spatiff",
+    "image": "https://github.com/infoshareacademy/jfdz4-WEBscy-app/blob/develop/public/data/images/spatif.jpg?raw=true"
   },
   {
     "id": 39,
@@ -367,7 +387,8 @@
     "Date": "13-03-17",
     "Type": "Kultura",
     "Price": 10,
-    "Place": "Teatr Miniatura"
+    "Place": "Teatr Miniatura",
+    "image": "https://github.com/infoshareacademy/jfdz4-WEBscy-app/blob/develop/public/data/images/miniatura.jpg?raw=true"
   },
   {
     "id": 40,
@@ -376,7 +397,8 @@
     "Date": "10-06-17",
     "Type": "Kino",
     "Price": 20,
-    "Place": "Multikino"
+    "Place": "Multikino",
+    "image": "https://github.com/infoshareacademy/jfdz4-WEBscy-app/blob/develop/public/data/images/multikino_sopot.jpg?raw=true"
   },
   {
     "id": 41,
@@ -405,7 +427,8 @@
     "Date": "17-08-17",
     "Type": "Kultura",
     "Price": 35,
-    "Place": "Teatr Muzyczny"
+    "Place": "Teatr Muzyczny",
+    "image": "https://github.com/infoshareacademy/jfdz4-WEBscy-app/blob/develop/public/data/images/teatr-muzyczny-im_-danuty-baduszkowej-small.jpg?raw=true"
   },
   {
     "id": 44,
@@ -424,7 +447,8 @@
     "Date": "10-01-18",
     "Type": "Sport",
     "Price": 330,
-    "Place": "Stadion AMBER EXPO"
+    "Place": "Stadion AMBER EXPO",
+    "image": "https://github.com/infoshareacademy/jfdz4-WEBscy-app/blob/develop/public/data/images/stadionzdjecie_.jpg?raw=true"
   },
   {
     "id": 46,
@@ -433,7 +457,8 @@
     "Date": "26-12-17",
     "Type": "Kultura",
     "Price": 15,
-    "Place": "Opera Bałtycka"
+    "Place": "Opera Bałtycka",
+    "image": "https://github.com/infoshareacademy/jfdz4-WEBscy-app/blob/develop/public/data/images/opera.jpg?raw=true"
   },
   {
     "id": 47,
@@ -462,7 +487,8 @@
     "Date": "31-04-17",
     "Type": "Kultura",
     "Price": 10,
-    "Place": "Opera Bałtycka"
+    "Place": "Opera Bałtycka",
+    "image": "https://github.com/infoshareacademy/jfdz4-WEBscy-app/blob/develop/public/data/images/opera.jpg?raw=true"
   },
   {
     "id": 50,
@@ -471,7 +497,8 @@
     "Date": "07-13-17",
     "Type": "Koncert",
     "Price": 32,
-    "Place": "Skwer Kościuszki"
+    "Place": "Skwer Kościuszki",
+    "image": "https://github.com/infoshareacademy/jfdz4-WEBscy-app/blob/develop/public/data/images/skwer.jpg?raw=true"
   }
 
 ]
