@@ -5,39 +5,42 @@
 
 #login-page {
     height: 100vh;
+    padding-top: 100px;
+    background: url('../public/data/images/login_bg.jpg') no-repeat;
 }
 
 #modal {
-    margin-top: 100px;
     padding-top: 30px;
     border-radius: 10px;
     margin-left: 35%;
     margin-right: 35%;
     border: 2px solid #dedede;
-    background-color:rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
-
+.welcome-logo {
+    width: 100px;
+}
 
 .filters-buttons li {
-display: inline-flex;
+    display: inline-flex;
     list-style-type: none;
 }
 
 .dropdown-menu > li > a {
     padding: 4px 22px;
 }
+
 .favorite {
     color: #1b71a0;
-    text-shadow: 2px 2px 15px black;
+    /*text-shadow: 2px 2px 15px black;*/
     font-family: cursive;
 
 }
 
 .favorite ul {
     display: flex;
-flex-direction: column;
-
+    flex-direction: column;
 
 }
 
@@ -63,35 +66,34 @@ flex-direction: column;
     text-decoration: none;
 }
 
-
 .favorite-event a:hover {
     color: darkturquoise;
     text-decoration: none;
 }
 
 .form-control {
-width: 77%;
+    width: 77%;
     border-radius: 55px;
 }
-
 
 input {
     outline: none;
 }
+
 input[type=search] {
     -webkit-appearance: textfield;
     -webkit-box-sizing: content-box;
     font-family: inherit;
     font-size: 100%;
 }
+
 input::-webkit-search-decoration,
 input::-webkit-search-cancel-button {
     display: none;
 }
 
-
 input[type=search] {
-    background: #ededed  url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+    background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
     border: solid 1px #ccc;
     padding: 9px 10px 9px 32px;
     width: 200px;
@@ -104,20 +106,21 @@ input[type=search] {
     -moz-transition: all .5s;
     transition: all .5s;
 }
+
 input[type=search]:focus {
     width: 300px;
     background-color: #fff;
     border-color: #2f96b4;
 
-    -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
-    -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
-    box-shadow: 0 0 5px rgba(109,207,246,.5);
+    -webkit-box-shadow: 0 0 5px rgba(109, 207, 246, .5);
+    -moz-box-shadow: 0 0 5px rgba(109, 207, 246, .5);
+    box-shadow: 0 0 5px rgba(109, 207, 246, .5);
 }
-
 
 input:-moz-placeholder {
     color: #2f96b4;
 }
+
 input::-webkit-input-placeholder {
     color: #2f96b4;
 }
@@ -130,7 +133,6 @@ input::-webkit-input-placeholder {
     top: 5px;
     right: -10px;
     transition: 0.5s;
-
 
 }
 
@@ -160,6 +162,7 @@ input::-webkit-input-placeholder {
     transition: 0.3s transform linear;
     cursor: pointer;
 }
+
 /**/
 .img {
     width: 250px;
@@ -171,7 +174,7 @@ input::-webkit-input-placeholder {
     border-radius: 5px;
 }
 
-.img:hover{
+.img:hover {
     opacity: 1;
     transition: 0.3s all linear;
     transform: scale(1.1);
@@ -187,7 +190,7 @@ input::-webkit-input-placeholder {
 
 .calendar-setcion {
     background-image: url("https://images2.alphacoders.com/437/437450.jpg");
-border-radius: 5px;
+    border-radius: 5px;
 }
 
 .rbc-toolbar button {
@@ -241,7 +244,6 @@ body {
     background-color: #398439;
 }
 
-
 .local-img {
     max-width: 20px;
 }
@@ -254,7 +256,7 @@ body {
     /*background-color:#4ea3f4;*/
     background-image: none;
     /*background-repeat: no-repeat;*/
-    background: linear-gradient(to bottom,#3995e9, white 100%);
+    background: linear-gradient(to bottom, #3995e9, white 100%);
 }
 
 .nav-logo {
@@ -273,15 +275,17 @@ body {
 }
 
 .navbar-default .navbar-link p:hover {
-text-decoration: none;
+    text-decoration: none;
     transform: scale(1.2);
     transition: 0.3s transform linear;
     cursor: pointer;
 }
 
+.dropdown-menu > li > a {
+    width: 100%;
+}
 
-
-.navbar-default .navbar-nav > li > a{
+.navbar-default .navbar-nav > li > a {
     color: white;
     /*color: #1b71a0;*/
     text-shadow: 2px 2px 15px black;
@@ -292,7 +296,7 @@ text-decoration: none;
     transition: 0.3s transform linear;
 }
 
-.navbar-default .navbar-nav > li > a:hover{
+.navbar-default .navbar-nav > li > a:hover {
     text-decoration: none;
     transform: scale(1.2);
     transition: 0.3s transform linear;
@@ -300,7 +304,7 @@ text-decoration: none;
 }
 
 .event-icon {
- max-width: 20px;
+    max-width: 20px;
 
 }
 
@@ -311,4 +315,11 @@ text-decoration: none;
 
 .desription {
     color: #4ea3f4;
+}
+
+@media screen and (max-width: 767px) {
+    #modal {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
 }

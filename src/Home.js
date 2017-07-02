@@ -8,6 +8,7 @@ const Home = () => (
     <div id="modal">
 
       <div>
+        <img src="/logo.svg" alt="przestrzegamy SEO :P" className="welcome-logo" />
         <h4>Logowanie</h4>
         <SignInForm/>
       </div>
