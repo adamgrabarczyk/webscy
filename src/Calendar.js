@@ -222,7 +222,9 @@ class Calendar extends React.Component {
 
 
                 </div>
+                <footer></footer>
             </Grid>
+
         )
     }
 }

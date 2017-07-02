@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Table } from 'react-bootstrap'
+import { Grid } from 'react-bootstrap'
 
     class Event extends React.Component {
 
@@ -30,6 +30,7 @@ import React from 'react'
                 )
 
                     return (
+                        <Grid>
                       <div>
                             <h1>
 
@@ -42,7 +43,7 @@ import React from 'react'
                             </h1>
                           <ul>
                               <li>
-                                  Cena:
+                                  <img src="/price.ico" alt="" className="event-icon"/>
                                   {' '}
                                   {
                                       eventt ?
@@ -51,7 +52,7 @@ import React from 'react'
                                   }
                               </li>
                               <li>
-                                  Lokalizacja:
+                                  <img src="/local.png" alt="" className="event-icon"/>
                                   {' '}
                                   {
                                       eventt ?
@@ -59,9 +60,19 @@ import React from 'react'
                                           null
                                   }
                               </li>
+                              <li>
+                                  <img src="/kalendarz.png" alt="" className="event-icon"/>
+                                  {' '}
+                                  {
+                                      eventt ?
+                                          eventt.Date :
+                                          null
+                                  }
+                              </li>
                                       </ul>
 
                           </div>
+                        </Grid>
                     )
                   }
     }

@@ -304,3 +304,8 @@ text-decoration: none;
     transition: 0.3s transform linear;
     cursor: pointer;
 }
+
+.event-icon {
+ max-width: 20px;
+
+}
