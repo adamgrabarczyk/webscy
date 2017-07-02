@@ -155,7 +155,7 @@ class Calendar extends React.Component {
                         <Col>
                             <div className="notice">
                                 <p>Dzięki naszemu Kalendarzowi nie ominie Cię żadne ważne wydarzenie!</p>
-                            <h5> Wystarczy że klikniesz na symbol serca przy wydarzeniu, które Cie interesuje a my przypomnimy Ci o nim, w dniu jego rozpoczęcia.Wydarzenia, które dodano do ulubionych możesz podejrzeć kiedy chcesz,klikając &darr;  na hamburgera .</h5>
+                            <h5> Wystarczy że klikniesz na symbol serca przy wydarzeniu, które Cie interesuje a my przypomnimy Ci o nim, w dniu jego rozpoczęcia.Wydarzenia, które dodano do ulubionych możesz podejrzeć kiedy chcesz,klikając na hamburgera &darr;.</h5>
                             </div>
                         </Col>
                         <Col sm={6} md={8} >
