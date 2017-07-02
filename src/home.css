@@ -207,7 +207,7 @@ body {
     font-family: cursive;
     font-size: large;
     color: #1b71a0;
-    text-shadow: 2px 2px 15px black;
+    /*text-shadow: 2px 2px 15px black;*/
 }
 
 .find {
@@ -215,7 +215,6 @@ body {
     color: #1b71a0;
     padding-top: 30px;
     padding-bottom: 20px;
-    text-shadow: 2px 2px 15px black;
 }
 
 .thumbnail .caption {
@@ -303,4 +302,13 @@ text-decoration: none;
 .event-icon {
  max-width: 20px;
 
+}
+
+.tittle-desc {
+    color: #1b71a0;
+    text-shadow: 2px 2px 50px black;
+}
+
+.desription {
+    color: #4ea3f4;
 }
