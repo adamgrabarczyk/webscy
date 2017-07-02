@@ -18,10 +18,6 @@
 }
 
 
-.notification notification-info {
-    box-shadow: 0;
-
-}
 
 .filters-buttons li {
 display: inline-flex;
@@ -166,12 +162,11 @@ input::-webkit-input-placeholder {
 }
 /**/
 .img {
-    max-width: 250px;
+    width: 250px;
     margin: 10px 0;
     height: 120px;
     text-align: center;
     background: white;
-    padding: 10px;
     opacity: 0.8;
     border-radius: 5px;
 }
@@ -212,7 +207,7 @@ body {
     font-family: cursive;
     font-size: large;
     color: #1b71a0;
-    text-shadow: 2px 2px 15px black;
+    /*text-shadow: 2px 2px 15px black;*/
 }
 
 .find {
@@ -220,7 +215,6 @@ body {
     color: #1b71a0;
     padding-top: 30px;
     padding-bottom: 20px;
-    text-shadow: 2px 2px 15px black;
 }
 
 .thumbnail .caption {
@@ -308,4 +302,13 @@ text-decoration: none;
 .event-icon {
  max-width: 20px;
 
+}
+
+.tittle-desc {
+    color: #1b71a0;
+    text-shadow: 2px 2px 50px black;
+}
+
+.desription {
+    color: #4ea3f4;
 }

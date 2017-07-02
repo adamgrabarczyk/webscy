@@ -32,7 +32,7 @@ import { Grid } from 'react-bootstrap'
                     return (
                         <Grid>
                       <div>
-                            <h1>
+                            <h1 className="tittle-desc">
 
                               {' '}
                               {
@@ -41,8 +41,8 @@ import { Grid } from 'react-bootstrap'
                                       null
                                   }
                             </h1>
-                          <ul>
-                              <li>
+                          <ul className="desription">
+                              <p>
                                   <img src="/price.ico" alt="" className="event-icon"/>
                                   {' '}
                                   {
@@ -50,8 +50,8 @@ import { Grid } from 'react-bootstrap'
                                           eventt.Price + ' zł' :
                                           null
                                   }
-                              </li>
-                              <li>
+                              </p>
+                              <p>
                                   <img src="/local.png" alt="" className="event-icon"/>
                                   {' '}
                                   {
@@ -59,8 +59,8 @@ import { Grid } from 'react-bootstrap'
                                           eventt.Place :
                                           null
                                   }
-                              </li>
-                              <li>
+                              </p>
+                              <p>
                                   <img src="/kalendarz.png" alt="" className="event-icon"/>
                                   {' '}
                                   {
@@ -68,7 +68,15 @@ import { Grid } from 'react-bootstrap'
                                           eventt.Date :
                                           null
                                   }
-                              </li>
+                              </p>
+                              <p>
+                                  {' '}
+                                  {
+                                      eventt ?
+                                          eventt.description :
+                                          null
+                                  }
+                              </p>
                                       </ul>
 
                           </div>
