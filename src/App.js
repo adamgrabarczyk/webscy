@@ -54,7 +54,7 @@ export default class App extends React.Component {
           <div>
             {
               this.state.user === null ?
-                <Route exact path="/" component={Home}/> :
+                <Route path="/" component={Home}/> :
                 <div>
                   <Navbar>
                     <Navbar.Header>
@@ -86,11 +86,13 @@ export default class App extends React.Component {
                       <NavItem onClick={() => firebase.auth().signOut()}> (Wyloguj)</NavItem>
                     </Nav>
                   </Navbar>
+
                   <Route exact path="/calendar" component={Calendar}/>
                   <Route path="/calendar/:eventtId" component={Event}/>
                   <Route path="/UsersList" component={UsersList}/>
                 </div>
             }
+
           </div>
         </div>
       </Router>

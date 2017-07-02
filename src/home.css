@@ -266,7 +266,7 @@ body {
 .navbar-default .navbar-link p {
     color: white;
     /*color: #1b71a0;*/
-    text-shadow: 2px 2px 15px black;
+
     text-decoration: none;
     width: 40px;
     height: 20px;
@@ -285,15 +285,21 @@ body {
     width: 100%;
 }
 
+.navbar-default .navbar-link {
+    color: #ffffff;
+}
+
 .navbar-default .navbar-nav > li > a {
     color: white;
-    /*color: #1b71a0;*/
-    text-shadow: 2px 2px 15px black;
     text-decoration: none;
     width: 120px;
     height: 20px;
     /*margin: 5px;*/
     transition: 0.3s transform linear;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: white;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
@@ -310,7 +316,7 @@ body {
 
 .tittle-desc {
     color: #1b71a0;
-    text-shadow: 2px 2px 50px black;
+    /*text-shadow: 2px 2px 50px black;*/
 }
 
 .desription {
@@ -322,4 +328,13 @@ body {
         margin-left: 10%;
         margin-right: 10%;
     }
+}
+
+.rbc-calendar *, .rbc-calendar *:before, .rbc-calendar *:after {
+    color: white;
+}
+
+.rbc-toolbar button {
+    color: white;
+    font-weight: 900;
 }
