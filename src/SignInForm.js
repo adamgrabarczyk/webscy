@@ -1,5 +1,6 @@
 import React from 'react'
 import firebase from 'firebase'
+import  {browserHistory} from 'react-router-dom';
 
 export default class SignInForm extends React.Component {
 
@@ -16,7 +17,9 @@ export default class SignInForm extends React.Component {
     event.preventDefault()
     //console.log(this.state.email, this.state.password)
     firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then(
-      data => console.log('data: ', data)
+
+      data => console.log('data: ', data).
+      browserHistory.push('/calendar')
     ).catch(
       error => console.log('error: ', error)
     )
