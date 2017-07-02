@@ -32,7 +32,9 @@ display: inline-flex;
     padding: 4px 22px;
 }
 .favorite {
-
+    color: #1b71a0;
+    text-shadow: 2px 2px 15px black;
+    font-family: cursive;
 
 }
 
@@ -67,7 +69,7 @@ flex-direction: column;
 
 
 .favorite-event a:hover {
-    color: aqua;
+    color: darkturquoise;
     text-decoration: none;
 }
 
@@ -131,9 +133,7 @@ input::-webkit-input-placeholder {
     z-index: 1;
     top: 5px;
     right: -10px;
-
     transition: 0.5s;
-    /*padding-top: 60px;*/
 
 
 }
@@ -174,11 +174,6 @@ input::-webkit-input-placeholder {
     padding: 10px;
     opacity: 0.8;
     border-radius: 5px;
-    /*border: 0.2px solid silver;*/
-    /*box-sizing: border-box;*/
-    /*display: flex;*/
-    /*justify-content: space-around;*/
-    /*flex-wrap: wrap;*/
 }
 
 .img:hover{
@@ -189,4 +184,128 @@ input::-webkit-input-placeholder {
 
 .thumbnail-image {
     float: right;
+}
+
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    min-width: 130px;
+}
+
+.calendar-setcion {
+    background-image: url("https://images2.alphacoders.com/437/437450.jpg");
+border-radius: 5px;
+}
+
+.rbc-toolbar button {
+    color: lightslategray;
+    margin-top: 10px;
+}
+
+.rbc-event {
+    background-color: #449d44;
+}
+
+body {
+    /*background-color: #99caf7;*/
+}
+
+.notice {
+    font-family: cursive;
+    font-size: large;
+    color: #1b71a0;
+    text-shadow: 2px 2px 15px black;
+}
+
+.find {
+    font-family: cursive;
+    color: #1b71a0;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    text-shadow: 2px 2px 15px black;
+}
+
+.thumbnail .caption {
+
+    background-image: url("https://www.planwallpaper.com/static/images/Alien_Ink_2560X1600_Abstract_Background_1.jpg");
+
+}
+
+.thumbnail h2 {
+    color: white;
+}
+
+.thumbnail p {
+    color: white;
+}
+
+.btn-primary {
+    background-image: linear-gradient(to bottom, #398439 0%, #3e8f3e 100%);
+    background-color: #398439;
+
+}
+
+.btn-primary:hover {
+    background-color: #398439;
+}
+
+
+.local-img {
+    max-width: 20px;
+}
+
+.navi {
+    color: #4ea3f4;
+}
+
+.navbar-default {
+    /*background-color:#4ea3f4;*/
+    background-image: none;
+    /*background-repeat: no-repeat;*/
+    background: linear-gradient(to bottom,#3995e9, white 100%);
+}
+
+.nav-logo {
+    max-width: 80px;
+}
+
+.navbar-default .navbar-link p {
+    color: white;
+    /*color: #1b71a0;*/
+    text-shadow: 2px 2px 15px black;
+    text-decoration: none;
+    width: 40px;
+    height: 20px;
+    margin: 5px;
+    transition: 0.3s transform linear;
+}
+
+.navbar-default .navbar-link p:hover {
+text-decoration: none;
+    transform: scale(1.2);
+    transition: 0.3s transform linear;
+    cursor: pointer;
+}
+
+
+
+.navbar-default .navbar-nav > li > a{
+    color: white;
+    /*color: #1b71a0;*/
+    text-shadow: 2px 2px 15px black;
+    text-decoration: none;
+    width: 120px;
+    height: 20px;
+    /*margin: 5px;*/
+    transition: 0.3s transform linear;
+}
+
+.navbar-default .navbar-nav > li > a:hover{
+    text-decoration: none;
+    transform: scale(1.2);
+    transition: 0.3s transform linear;
+    cursor: pointer;
+}
+
+.event-icon {
+ max-width: 20px;
+
 }

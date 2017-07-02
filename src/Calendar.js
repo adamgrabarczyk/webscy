@@ -143,8 +143,8 @@ class Calendar extends React.Component {
                 <div>
                     <NotificationContainer/>
                     <Row className="show-grid">
-                        <MyCalendar events={this.state.events} history={this.props.history}/>
-                        <h2>Calendar</h2>
+                        <div className="container-fluid calendar-setcion"><MyCalendar events={this.state.events} history={this.props.history}/></div>
+                        <h4 className="find">Skorzystaj z naszej wyszukiwarki !</h4>
                         <Col sm={6} md={4}>
                             <Filter search={this.state.search}
                                     searchUpdate={this.searchUpdate}
@@ -152,7 +152,12 @@ class Calendar extends React.Component {
                                     activeFilter={this.state.activeFilter}
                                     resetFilter={this.resetFilter}/>
                         </Col>
-                        <div></div>
+                        <Col>
+                            <div className="notice">
+                                <p>Dzięki naszemu Kalendarzowi nie ominie Cię żadne ważne wydarzenie!</p>
+                            <h5> Wystarczy że klikniesz na symbol serca przy wydarzeniu, które Cie interesuje a my przypomnimy Ci o nim, w dniu jego rozpoczęcia.Wydarzenia, które dodano do ulubionych możesz podejrzeć kiedy chcesz,klikając &darr;  na hamburgera .</h5>
+                            </div>
+                        </Col>
                         <Col sm={6} md={8} >
                             <div className="favsSection">
                             <a onClick={this.onClick.bind(this)} href='#'><Burger
@@ -185,8 +190,8 @@ class Calendar extends React.Component {
                                         <Thumbnail key={eventt.id}>
 
                                             <h2>{eventt.Name}</h2>
-                                            <p>Lokalizacja: {eventt.Town}</p>
-                                            <p>Kiedy: {eventt.Date}</p>
+                                            <p><img src="/localization.png" alt="" className="local-img"/> {eventt.Town}</p>
+                                            <p><img src="/calendar.png" alt="" className="local-img"/> {eventt.Date}</p>
                                             <p className="thumbnail-image">
                                                 <img src={eventt.image} alt="" className="img"/>
                                             </p>
@@ -217,7 +222,9 @@ class Calendar extends React.Component {
 
 
                 </div>
+                <footer></footer>
             </Grid>
+
         )
     }
 }
