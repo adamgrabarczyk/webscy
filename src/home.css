@@ -189,7 +189,8 @@ input::-webkit-input-placeholder {
 }
 
 .calendar-setcion {
-    background-image: url("https://images2.alphacoders.com/437/437450.jpg");
+    /*background-image: url("https://images2.alphacoders.com/437/437450.jpg");*/
+    background-color: #eaf2f3;
     border-radius: 5px;
 }
 
@@ -253,10 +254,10 @@ body {
 }
 
 .navbar-default {
-    /*background-color:#4ea3f4;*/
+    background-color: #0D3349;
     background-image: none;
     /*background-repeat: no-repeat;*/
-    background: linear-gradient(to bottom, #3995e9, white 100%);
+    /*background: linear-gradient(to bottom, #3995e9, white 100%);*/
 }
 
 .nav-logo {
@@ -331,10 +332,10 @@ body {
 }
 
 .rbc-calendar *, .rbc-calendar *:before, .rbc-calendar *:after {
-    color: white;
+    /*color: white;*/
 }
 
 .rbc-toolbar button {
-    color: white;
+    /*color: white;*/
     font-weight: 900;
 }
