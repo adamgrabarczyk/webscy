@@ -18,8 +18,7 @@ export default class SignInForm extends React.Component {
     //console.log(this.state.email, this.state.password)
     firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then(
 
-      data => console.log('data: ', data).
-      browserHistory.push('/calendar')
+      data => console.log('data: ', data)
     ).catch(
       error => console.log('error: ', error)
     )

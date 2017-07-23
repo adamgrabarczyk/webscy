@@ -196,7 +196,7 @@ class Calendar extends React.Component {
                                                 <img src={eventt.image} alt="" className="img"/>
                                             </p>
                                             <p>{eventt.Type}</p>
-                                            <p><LinkContainer to={'/calendar/' + eventt.id}><Button onClick=""
+                                            <p><LinkContainer to={'/welcome/' + eventt.id}><Button onClick=""
                                                                                                     bsStyle="primary">Więcej</Button></LinkContainer>
                                             </p>
                                             <p>

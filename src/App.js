@@ -13,6 +13,7 @@ import Home from './Home'
 import Calendar from './Calendar'
 import Event from './Event'
 import UsersList from './UsersList'
+import Welcome from './welcome'
 
 // Initialize Firebase
 const config = {
@@ -49,53 +50,62 @@ export default class App extends React.Component {
   render() {
     return (
 
-      <Router>
-        <div>
+        <Router>
           <div>
-            {
-              this.state.user === null ?
-                <Route path="/" component={Home}/> :
-                <div>
-                  <Navbar>
-                    <Navbar.Header>
-                      <Navbar.Brand>
-                        <a href="#"><img src="/logo.svg" alt="" className="nav-logo"/></a>
-                      </Navbar.Brand>
-                      <Navbar.Toggle />
-                    </Navbar.Header>
-                    <Nav>
-                      <Navbar.Collapse>
-                        <Navbar.Text>
-                          <LinkContainer to="/calendar">
-                            <Navbar.Link><p>Kalendarz</p></Navbar.Link>
-                          </LinkContainer>
-                        </Navbar.Text>
-                      </Navbar.Collapse>
-                    </Nav>
+            <div>
+              {
+                this.state.user === null ?
+                  <Route path="/" component={Home}/> :
+                  <div>
+                    <Navbar>
+                      <Navbar.Header>
+                        <Navbar.Brand>
+                          <a href="#"><img src="/logo.svg" alt="" className="nav-logo"/></a>
+                        </Navbar.Brand>
+                        <Navbar.Toggle />
+                      </Navbar.Header>
                       <Nav>
                         <Navbar.Collapse>
-                            <Navbar.Text>
-                        <LinkContainer to="/UsersList">
-                            <Navbar.Link></Navbar.Link>
-                        </LinkContainer>
-                            </Navbar.Text>
+                          <Navbar.Text>
+                            <LinkContainer to="/welcome">
+                              <Navbar.Link><p>Kalendarz</p></Navbar.Link>
+                            </LinkContainer>
+                          </Navbar.Text>
                         </Navbar.Collapse>
-                    </Nav>
-                    <Nav pullRight>
-                      <NavItem>{this.state.user.email}</NavItem>
-                      <NavItem onClick={() => firebase.auth().signOut()}>(Wyloguj)</NavItem>
-                    </Nav>
-                  </Navbar>
+                      </Nav>
+                      <Nav>
+                        <Navbar.Collapse>
+                          <Navbar.Text>
+                            <LinkContainer to="/calendar">
+                              <Navbar.Link><p>Kalendarz</p></Navbar.Link>
+                            </LinkContainer>
+                          </Navbar.Text>
+                        </Navbar.Collapse>
+                      </Nav>
+                        <Nav>
+                          <Navbar.Collapse>
+                              <Navbar.Text>
+                          <LinkContainer to="/UsersList">
+                              <Navbar.Link></Navbar.Link>
+                          </LinkContainer>
+                              </Navbar.Text>
+                          </Navbar.Collapse>
+                      </Nav>
+                      <Nav pullRight>
+                        <NavItem>{this.state.user.email}</NavItem>
+                        <NavItem onClick={() => firebase.auth().signOut()}>(Wyloguj)</NavItem>
+                      </Nav>
+                    </Navbar>
+                    <Route path="/" component={Welcome}/>
+                    <Route exact path="/calendar" component={Calendar}/>
+                    <Route path="/welcome/:eventtId" component={Event}/>
+                    <Route path="/UsersList" component={UsersList}/>
+                  </div>
+              }
 
-                  <Route exact path="/calendar" component={Calendar}/>
-                  <Route path="/calendar/:eventtId" component={Event}/>
-                  <Route path="/UsersList" component={UsersList}/>
-                </div>
-            }
-
+            </div>
           </div>
-        </div>
-      </Router>
+        </Router>
 
     )
   }
